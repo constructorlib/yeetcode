@@ -6,16 +6,17 @@ import Navbar from "react-bootstrap/Navbar";
 function Header() {
   return (
     <div className="header-all">
-      <Navbar bg="light" data-bs-theme="light">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
+      <div className="navbar">
+        <div className="navbar-links">
+          <a href="#">Home</a>
+          <a href="#">Tutorials</a>
+          <a href="#">Projects</a>
+          <a href="#">Contests</a>
+          <a href="#">Community</a>
+          <a href="#">Calendar</a>
+        </div>
+        <div className="navbar-icons"></div>
+      </div>
     </div>
   );
 }

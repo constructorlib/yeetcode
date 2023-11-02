@@ -1,0 +1,17 @@
+/* Header */
+.header-all {
+  margin-top: 20px;
+}
+.navbar-links {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.navbar-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+.navbar-icons {
+  width: 40%;
+}
