@@ -1,6 +1,11 @@
 /* Header */
+
 .header-all {
   margin-top: 20px;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
 }
 .navbar-links {
   width: 60%;
@@ -14,4 +19,13 @@
 }
 .navbar-icons {
   width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  /* align-items: center; */
+  /* margin-left: auto; */
+}
+.faicon {
+  color: #a08d8d;
+  margin: 0 50px 0 0; /* Add horizontal spacing between icons */
+  font-size: 20px;
 }
