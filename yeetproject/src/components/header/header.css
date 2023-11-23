@@ -62,7 +62,16 @@
 }
 /*Motivation*/
 .registerMotivation {
-  /* width: 60%; */
+  font-weight: bold;
+  font-family: "Varela Round", sans-serif;
+  width: 60%;
+}
+.registerMotivation p {
+  margin-top: 20px;
+  font-size: 20px;
+  width: 70%;
+  text-align: justify;
+  color: #a08d8d;
 }
 /* Registration and Motivation */
 .rWrapper {
@@ -73,7 +82,7 @@
 }
 .register {
   width: 80%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   justify-content: space-around;
 }

@@ -39,7 +39,25 @@ export default function Header() {
 
       <div className="rWrapper">
         <div className="register">
-          <div className="registerMotivation">1</div>
+          <div className="registerMotivation">
+            <p className="motivationStudy">
+              Embark on a transformative academic journey with Sup!, your
+              ultimate destination for comprehensive exam preparations in
+              biology, chemistry, and mathematics! Elevate your learning
+              experience with our unparalleled platform, offering a treasure
+              trove of resources curated by seasoned educators. What sets us
+              apart is our commitment to excellence, reflected in our official
+              approval by the Department of Mathematics and Technology (DMT).
+              Prepare with confidence, knowing you are aligning your studies
+              with industry standards.
+              <br /> <br />
+              Dive into our extensive library of study materials, meticulously
+              designed to demystify complex concepts and empower you to excel in
+              your exams. Our user-friendly interface ensures seamless
+              navigation, allowing you to focus on what truly matters—mastering
+              the subjects that shape your academic future.
+            </p>
+          </div>
           <div className="registerPlace">
             <p className="adverIn">
               The innovative, free and effective way <br /> to prepare for
