@@ -7,24 +7,35 @@ import {
   faMagnifyingGlass,
   faBell,
   faUser,
+  faHourglassStart,
 } from "@fortawesome/free-solid-svg-icons";
+
 function Header() {
   return (
     <div className="header-all">
       <div className="navbar">
-        <div className="navbar-links">
-          <a href="#">Home</a>
-          <a href="#">Tutorials</a>
-          <a href="#">Projects</a>
-          <a href="#">Contests</a>
-          <a href="#">Community</a>
-          <a href="#">Calendar</a>
-        </div>
-        <div className="navbar-icons">
+        <span className="logo">
+          <span>
+            <FontAwesomeIcon className="faicon" icon={faHourglassStart} />
+          </span>
+          SUP!
+        </span>
+        <span className="language">
+          <span>
+            Site Language <span className="content-show">English</span>
+          </span>
+          <div className="dropdown-content">
+            <p>Uzbek</p>
+            <p>Russian</p>
+          </div>
+        </span>
+      </div>
+      <div className="not-navbar">
+        {/* <div className="navbar-icons">
           <FontAwesomeIcon className="faicon" icon={faMagnifyingGlass} />
           <FontAwesomeIcon className="faicon" icon={faBell} />
           <FontAwesomeIcon className="faicon" icon={faUser} />
-        </div>
+        </div> */}
       </div>
       <br />
       <hr />
