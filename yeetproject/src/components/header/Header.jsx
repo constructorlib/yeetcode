@@ -37,11 +37,13 @@ export default function Header() {
         </span>
       </div>
 
-      <div className="register">
-        <div className="registerMotivation"></div>
-        <div className="registerPlace">
-          <button className="regNow">Get Started</button>
-          <button className="haveAcc">I already have an account</button>
+      <div className="rWrapper">
+        <div className="register">
+          <div className="registerMotivation">1</div>
+          <div className="registerPlace">
+            <button className="btn regNow">Get Started</button>
+            <button className="btn haveAcc">I already have an account</button>
+          </div>
         </div>
       </div>
     </div>
