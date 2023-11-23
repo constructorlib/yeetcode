@@ -15,11 +15,16 @@ function Header() {
     <div className="header-all">
       <div className="navbar">
         <span className="logo">
-          <span>
-            <FontAwesomeIcon className="faicon" icon={faHourglassStart} />
+          <span className="logoName">
+            <span>
+              <FontAwesomeIcon className="logoIcon" icon={faHourglassStart} />
+            </span>
+            Sup!
           </span>
-          SUP!
+
+          <p className="logoText">Innovative way to study!</p>
         </span>
+        {/* Language Selector here: */}
         <span className="language">
           <span>
             Site Language: <span className="content-show">English v </span>

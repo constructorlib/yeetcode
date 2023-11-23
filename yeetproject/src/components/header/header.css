@@ -1,13 +1,41 @@
 /* Header */
 
 .header-all {
-  margin-top: 20px;
-  /* position: sticky;
-  top: 0;
-  z-index: 999; */
+  margin-top: 10px;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+/* Logo and Logo name */
+
+.logo {
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+}
+.logoName {
+  margin-right: 10px;
+  font-weight: bold;
+}
+.logoIcon {
+  margin-right: 15px;
+  color: darkkhaki;
+  font-size: 25px;
+}
+.logoText {
+  margin-top: 10px;
+  color: #a08d8d;
+  font-size: 15px;
+}
 /* Dropdown Language Menu */
+.language {
+  margin-top: 15px;
+}
 .dropdown-content {
   display: none;
   position: absolute;
@@ -34,10 +62,7 @@
 }
 
 /*can't touch this (yet)*/
-.navbar {
-  display: flex;
-  justify-content: space-around;
-}
+
 .navbar-links {
   width: 60%;
   display: flex;
