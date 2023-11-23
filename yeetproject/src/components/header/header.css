@@ -60,20 +60,30 @@
 .language span {
   color: #a08d8d;
 }
-
+/*Motivation*/
+.registerMotivation {
+  /* width: 60%; */
+}
 /* Registration and Motivation */
 .rWrapper {
   display: flex;
   justify-content: center;
   margin-top: 70px;
+  width: 100%;
 }
 .register {
-  width: 60%;
+  width: 80%;
   border: 1px solid black;
   display: flex;
   justify-content: space-around;
 }
 /* Reg Buttons */
+
+.registerPlace {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
 .btn {
   text-transform: uppercase;
   margin-top: 20px;
@@ -87,6 +97,8 @@
   cursor: pointer;
   border-radius: 10px;
   font-weight: bold;
+  font-family: "Varela Round", sans-serif;
+  width: 70%;
 }
 .regNow {
   background-color: #58cc02;
@@ -99,9 +111,13 @@
   color: #1cb0f6;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
-.registerPlace {
-  display: flex;
-  flex-direction: column;
+
+.adverIn {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Varela Round", sans-serif;
 }
 /* sad things */
 .navbar-links {
