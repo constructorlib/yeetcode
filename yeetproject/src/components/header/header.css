@@ -83,6 +83,8 @@
   display: flex;
   flex-direction: column;
   width: 40%;
+  justify-content: center;
+  align-items: center;
 }
 .btn {
   text-transform: uppercase;
@@ -118,6 +120,7 @@
   font-weight: bold;
   font-size: 20px;
   font-family: "Varela Round", sans-serif;
+  text-align: center;
 }
 /* sad things */
 .navbar-links {

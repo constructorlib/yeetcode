@@ -42,7 +42,8 @@ export default function Header() {
           <div className="registerMotivation">1</div>
           <div className="registerPlace">
             <p className="adverIn">
-              The innovative, free and effective way to prepare for exams!
+              The innovative, free and effective way <br /> to prepare for
+              exams!
             </p>
             <button className="btn regNow">Get Started</button>
             <button className="btn haveAcc">I already have an account</button>
