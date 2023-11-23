@@ -7,8 +7,7 @@
   z-index: 999; */
 }
 
-/* Navbar top, make sticky to the top, 2 things. Choose font. */
-
+/* Dropdown Language Menu */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -18,8 +17,20 @@
   padding: 12px 16px;
   z-index: 1;
 }
+.dropdown-content p {
+  margin-top: 10px;
+  cursor: pointer;
+}
+.dropdown-content p:hover {
+  text-decoration: underline;
+  color: red;
+}
 .language:hover .dropdown-content {
   display: block;
+}
+
+.language span {
+  color: #a08d8d;
 }
 
 /*can't touch this (yet)*/

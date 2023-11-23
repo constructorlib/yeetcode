@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./header.css";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
@@ -23,11 +22,12 @@ function Header() {
         </span>
         <span className="language">
           <span>
-            Site Language <span className="content-show">English</span>
+            Site Language: <span className="content-show">English v </span>
           </span>
           <div className="dropdown-content">
-            <p>Uzbek</p>
-            <p>Russian</p>
+            <p>O'zbekcha</p>
+            <p>اللغة العربية</p>
+            <p>Русский</p>
           </div>
         </span>
       </div>
