@@ -21,6 +21,8 @@
 .language:hover .dropdown-content {
   display: block;
 }
+
+/*can't touch this (yet)*/
 .navbar {
   display: flex;
   justify-content: space-around;
