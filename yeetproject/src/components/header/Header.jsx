@@ -9,7 +9,7 @@ import {
   faHourglassStart,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Header() {
+export default function Header() {
   const [language, setLanguage] = useState([]);
   return (
     <div className="header-all">
@@ -36,17 +36,14 @@ function Header() {
           </div>
         </span>
       </div>
-      <div className="not-navbar">
-        {/* <div className="navbar-icons">
-          <FontAwesomeIcon className="faicon" icon={faMagnifyingGlass} />
-          <FontAwesomeIcon className="faicon" icon={faBell} />
-          <FontAwesomeIcon className="faicon" icon={faUser} />
-        </div> */}
+
+      <div className="register">
+        <div className="registerMotivation"></div>
+        <div className="registerPlace">
+          <button className="regNow">Get Started</button>
+          <button className="haveAcc">I already have an account</button>
+        </div>
       </div>
-      <br />
-      <hr />
     </div>
   );
 }
-
-export default Header;

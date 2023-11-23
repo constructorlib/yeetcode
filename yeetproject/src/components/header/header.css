@@ -61,8 +61,15 @@
   color: #a08d8d;
 }
 
-/*can't touch this (yet)*/
-
+/* Registration and Motivation */
+.register {
+  align-items: center;
+  width: 60%;
+  border: 1px solid black;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
 .navbar-links {
   width: 60%;
   display: flex;
