@@ -26,6 +26,7 @@
   margin-right: 15px;
   color: darkkhaki;
   font-size: 25px;
+  cursor: pointer;
 }
 .logoText {
   margin-top: 10px;
@@ -144,23 +145,3 @@
 }
 
 /* sad things */
-.navbar-links {
-  width: 60%;
-  display: flex;
-  justify-content: space-evenly;
-}
-.navbar-links a {
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-}
-.navbar-icons {
-  width: 40%;
-  display: flex;
-  justify-content: flex-end;
-}
-.faicon {
-  color: #a08d8d;
-  margin: 0 50px 0 0; /* Add horizontal spacing between icons */
-  font-size: 20px;
-}
