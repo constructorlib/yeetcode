@@ -75,6 +75,8 @@ export default function Header() {
 
       <div className="bottomIcons">
         <div className="bottomWrapper">
+          <h1>We offer tests in these subjects:</h1>
+
           <div className="courseTitle">
             <span className="courses">
               <p className="courseName">Chemistry: </p>

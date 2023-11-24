@@ -78,7 +78,7 @@
 .rWrapper {
   display: flex;
   justify-content: center;
-  margin-top: 70px;
+  margin-top: 50px;
   width: 100%;
 }
 .register {
@@ -136,12 +136,27 @@
 .bottomWrapper {
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.bottomWrapper h1 {
+  font-family: "Varela Round", sans-serif;
+  font-size: 28px;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  color: gray;
 }
 .courseTitle {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  width: 100%;
 }
-
+.courses {
+  display: flex;
+}
+.courses p {
+  margin-right: 10px;
+}
 /* sad things */
