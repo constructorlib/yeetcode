@@ -75,22 +75,27 @@ export default function Header() {
 
       <div className="bottomIcons">
         <div className="bottomWrapper">
-          <span className="courses">
-            <p className="courseName">Chemistry: </p>
-            <FontAwesomeIcon className="logoIcon" icon={faFlaskVial} />
-          </span>
-          <span className="courses">
-            <p className="courseName">Chemistry: </p>
-            <FontAwesomeIcon className="logoIcon" icon={faSquareRootVariable} />
-          </span>
-          <span className="courses">
-            <p className="courseName">Chemistry: </p>
-            <FontAwesomeIcon className="logoIcon" icon={faDna} />
-          </span>
-          <span className="courses">
-            <p className="courseName">Chemistry: </p>
-            <FontAwesomeIcon className="logoIcon" icon={faComputer} />
-          </span>
+          <div className="courseTitle">
+            <span className="courses">
+              <p className="courseName">Chemistry: </p>
+              <FontAwesomeIcon className="logoIcon" icon={faFlaskVial} />
+            </span>
+            <span className="courses">
+              <p className="courseName">Mathematics: </p>
+              <FontAwesomeIcon
+                className="logoIcon"
+                icon={faSquareRootVariable}
+              />
+            </span>
+            <span className="courses">
+              <p className="courseName">Biology: </p>
+              <FontAwesomeIcon className="logoIcon" icon={faDna} />
+            </span>
+            <span className="courses">
+              <p className="courseName">Informatics: </p>
+              <FontAwesomeIcon className="logoIcon" icon={faComputer} />
+            </span>
+          </div>
         </div>
       </div>
     </div>

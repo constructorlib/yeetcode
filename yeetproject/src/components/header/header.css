@@ -131,6 +131,18 @@
   font-family: "Varela Round", sans-serif;
   text-align: center;
 }
+/* Course Icons Bottom */
+.bottomWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+.courseTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 /* sad things */
 .navbar-links {
   width: 60%;
