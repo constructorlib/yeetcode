@@ -7,10 +7,14 @@ import {
   faBell,
   faUser,
   faHourglassStart,
+  faFlaskVial,
+  faCalculator,
+  faSquareRootVariable,
+  faDna,
+  faComputer,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
-  const [language, setLanguage] = useState([]);
   return (
     <div className="header-all">
       <div className="navbar">
@@ -66,6 +70,27 @@ export default function Header() {
             <button className="btn regNow">Get Started</button>
             <button className="btn haveAcc">I already have an account</button>
           </div>
+        </div>
+      </div>
+
+      <div className="bottomIcons">
+        <div className="bottomWrapper">
+          <span className="courses">
+            <p className="courseName">Chemistry: </p>
+            <FontAwesomeIcon className="logoIcon" icon={faFlaskVial} />
+          </span>
+          <span className="courses">
+            <p className="courseName">Chemistry: </p>
+            <FontAwesomeIcon className="logoIcon" icon={faSquareRootVariable} />
+          </span>
+          <span className="courses">
+            <p className="courseName">Chemistry: </p>
+            <FontAwesomeIcon className="logoIcon" icon={faDna} />
+          </span>
+          <span className="courses">
+            <p className="courseName">Chemistry: </p>
+            <FontAwesomeIcon className="logoIcon" icon={faComputer} />
+          </span>
         </div>
       </div>
     </div>
