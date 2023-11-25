@@ -136,7 +136,7 @@
 .bottomWrapper {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 25px;
   justify-content: center;
   align-items: center;
 }

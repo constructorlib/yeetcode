@@ -16,6 +16,7 @@
   align-items: center;
 }
 .cardQuestion {
+  margin-top: 10px;
   border: 1px solid black;
   width: 60%;
   text-align: center;
