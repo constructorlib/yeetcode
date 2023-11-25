@@ -35,7 +35,22 @@ const PopAdvice = () => {
         <div className="modalContainer">
           <div className="modalContainer">
             <p className="closeBtn">X</p>
-            <div className="contentModal">adsads</div>
+            <div className="contentModal">
+              <h4>Your score is 6/11.</h4>
+              <p>To improve it even more, you can watch the following guide:</p>
+              <br /> <br />
+              <span>
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/grnP3mduZkM?si=huYmkPOIb-rmu4N6"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </span>
+            </div>
           </div>
         </div>
       </div>
