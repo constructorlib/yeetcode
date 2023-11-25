@@ -6,7 +6,7 @@ import Registration from "./pages/Registration/Registration";
 import "./style.css";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Registration />
-    {/* <Test /> */}
+    {/* <Registration /> */}
+    <Test />
   </React.StrictMode>
 );

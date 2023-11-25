@@ -1,6 +1,6 @@
 import React from "react";
 import "./test.css";
-
+import Header from "../header/Header";
 const Exponent = ({ base, power }) => (
   <span>
     {base}
@@ -31,6 +31,7 @@ const Javob = () => {
 export default function Test() {
   return (
     <div>
+      <Header />
       <div className="testHeader"></div>
       <div className="testWrapper">
         <div className="card">
