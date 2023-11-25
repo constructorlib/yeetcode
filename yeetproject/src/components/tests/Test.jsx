@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./test.css";
 import Header from "../header/Header";
 const Exponent = ({ base, power }) => (
@@ -28,7 +28,22 @@ const Javob = () => {
     </div>
   );
 };
+const PopAdvice = () => {
+  return (
+    <>
+      <div className="overlay">
+        <div className="modalContainer">
+          <div className="modalContainer">
+            <p className="closeBtn">X</p>
+            <div className="contentModal">adsads</div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 export default function Test() {
+  const [openModal, setOpenModal] = useState(false);
   return (
     <div>
       <Header />
@@ -71,6 +86,7 @@ export default function Test() {
           </div>
         </div>
       </div>
+      <PopAdvice />
     </div>
   );
 }
