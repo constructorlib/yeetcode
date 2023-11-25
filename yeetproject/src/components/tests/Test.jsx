@@ -20,7 +20,12 @@ export default function Test() {
               <Exponent base=" va y = 2x" power="2" />
             </p>
           </div>
-          <div className="cardAnswer"></div>
+          <div className="cardAnswer">
+            <p>1) 1</p>
+            <p>2) 2</p>
+            <p>3) 3</p>
+            <p>4) 4</p>
+          </div>
         </div>
       </div>
     </div>
