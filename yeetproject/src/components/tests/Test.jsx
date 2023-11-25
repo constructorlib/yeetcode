@@ -32,7 +32,6 @@ export default function Test() {
   return (
     <div>
       <Header />
-      <div className="testHeader"></div>
       <div className="testWrapper">
         <div className="card">
           <Savol />
@@ -41,6 +40,26 @@ export default function Test() {
           <Javob />
           <Savol />
           <Javob />
+        </div>
+        <div className="testPassed">
+          <div className="passWrapper">
+            <div className="passTitle">
+              <h4>3/9 tests passed, 6 more tests left!</h4>
+            </div>
+            <div className="passCredit">
+              <div className="correct">1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div className="correct">5</div>
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div className="correct">9</div>
+              <div>10</div>
+              <div>11</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

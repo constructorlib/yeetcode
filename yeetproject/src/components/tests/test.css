@@ -4,8 +4,9 @@
 
 .testWrapper {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 30px;
   height: 100px;
 }
 .card {
@@ -17,7 +18,6 @@
 }
 .cardQuestion {
   margin-top: 10px;
-  border: 1px solid black;
   width: 60%;
   text-align: center;
   width: 60%;
@@ -26,10 +26,12 @@
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   padding: 5px;
+  background-color: #1cb0f6;
+  font-weight: bold;
+  color: #fff;
 }
 .cardAnswer {
-  border: 1px solid red;
-  width: 60%;
+  border: 1px gray;
   text-align: left;
   width: 60%;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -42,4 +44,31 @@
 .cardAnswer p:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+/*Tests passed on right*/
+.testPassed {
+  width: 20%;
+  height: 50px;
+  text-align: center;
+  padding: 5px;
+}
+.passCredit {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.passCredit div {
+  width: 30px; /* Adjust the width to your preference */
+  margin-right: 5px;
+  box-sizing: border-box; /* Include padding and border in the total width */
+  text-align: center; /* Center the content horizontally */
+  border: 1px solid black;
+  background-color: whitesmoke;
+}
+.passCredit div:hover {
+  cursor: pointer;
+}
+.correct {
+  background-color: #58cc02 !important;
+  color: white;
 }
