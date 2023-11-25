@@ -96,3 +96,15 @@
 .courses p {
   margin-right: 10px;
 }
+
+/* Improve yourself place */
+.improve {
+  margin-top: 30px;
+}
+.advice {
+  margin-top: 10px;
+  text-align: left;
+}
+.advice p {
+  margin-top: 5px;
+}
