@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./registration.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faHourglassStart,
   faFlaskVial,
   faSquareRootVariable,
   faDna,

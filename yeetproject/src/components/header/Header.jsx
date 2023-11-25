@@ -1,13 +1,7 @@
 import React, { useState } from "react";
 import "./header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHourglassStart,
-  faFlaskVial,
-  faSquareRootVariable,
-  faDna,
-  faComputer,
-} from "@fortawesome/free-solid-svg-icons";
+import { faHourglassStart } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   return (
