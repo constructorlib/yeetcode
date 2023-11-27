@@ -1,28 +1,28 @@
 import { Container, Item, Icon } from "./styled";
-import { bio, streak, diamond, heart } from "assets/icons";
+import { challenge, challenge2, rank, profile, notification } from "assets/icons";
 
 const NavBar = () => {
   return (
     <Container>
       <Item>
-        <Icon src={bio} alt="home" />
+        <Icon src={challenge} alt="home" />
       </Item>
       <Item>
-        <Icon src={streak} alt="challenge" />
+        <Icon src={challenge2} alt="challenge" />
       </Item>
       <Item>
-        <Icon src={diamond} alt="rank" />
+        <Icon src={rank} alt="rank" />
       </Item>
       <Item>
-        <Icon src={heart} alt="account" />
-      </Item>
-
-      <Item>
-        <Icon src={heart} alt="rewards" />
+        <Icon src={profile} alt="profile" />
       </Item>
 
       <Item>
-        <Icon src={heart} alt="notifications" />
+        <Icon src={challenge} alt="rewards" />
+      </Item>
+
+      <Item>
+        <Icon src={notification} alt="notifications" />
       </Item>
     </Container>
   );
