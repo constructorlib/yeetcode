@@ -1,19 +1,7 @@
 import { useLocation } from "react-router";
 
 import { Container, Item, Icon } from "./styled";
-import {
-  challenge,
-  console,
-  congrats,
-  congrats2,
-  discuss,
-  medal,
-  money,
-  profile,
-  notification,
-  rank,
-  gift,
-} from "assets/icons";
+import { challenge, console, profile, notification, gift } from "assets/icons";
 
 const NavBar = () => {
   const location = useLocation();
