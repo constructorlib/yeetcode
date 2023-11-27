@@ -1,5 +1,9 @@
+import { Item, League, List, Meta } from "./components";
+
+import { Container } from "./styled";
+
 const Rank = () => {
-  return <div>Rank</div>;
+  return <Container>Rank</Container>;
 };
 
 export default Rank;
