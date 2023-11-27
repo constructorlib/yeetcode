@@ -1,10 +1,11 @@
-import { css } from "@emotion/react";
 import styled from "styled-components";
 import { typography } from "styles/";
 
 export const Container = styled.div`
-  width: 100vw;
-  height: max-content;
+  width: 100dvw;
+  height: calc(100dvh - 10rem);
+  display: flex;
+  flex-direction: column;
 
   position: relative;
   background-color: var(--secondary-bg);
@@ -15,6 +16,7 @@ export const List = styled.div`
   width: 100vw;
   gap: 2rem;
   padding: 5rem 0 5rem 5rem;
+  margin-top: auto;
   overflow-x: auto;
 `;
 
