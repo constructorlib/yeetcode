@@ -1,13 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { Test } from "pages/";
+import { Test, Menu } from "pages/";
 
-// import { Example } from "exp/";
+import { Header, Nav } from "components/";
 
 const _pages = () => {
   return (
     <Routes>
-      <Route path="/" element={<Test />} />
+      <Route path="/" element={<Menu />} />
       <Route path="/test" element={<Test />} />
 
       {/* ***EXPERIMENTAL*** */}
@@ -19,7 +19,9 @@ const _pages = () => {
 export const Router = () => {
   return (
     <BrowserRouter>
+      <Header />
       <_pages />
+      <Nav />
     </BrowserRouter>
   );
 };
