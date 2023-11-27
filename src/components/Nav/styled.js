@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import SVG from "react-inlinesvg";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   width: 100dvw;
@@ -12,7 +13,7 @@ export const Container = styled.div`
   background-color: var(--dark-bg);
 `;
 
-export const Item = styled.div`
+export const Item = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +21,7 @@ export const Item = styled.div`
   border-radius: 1rem;
 
   ${(props) =>
-    props.active &&
+    props.active === "active" &&
     css`
       border: 2px solid var(--secondary-text);
     `}

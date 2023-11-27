@@ -7,8 +7,13 @@ import { Header, Nav } from "components/";
 const _pages = () => {
   return (
     <Routes>
-      <Route path="/" element={<Menu />} />
-      <Route path="/test" element={<Test />} />
+      <Route path="/rewards" element={<Test />} />
+      <Route path="/rank" element={<Test />} />
+      <Route path="/course" element={<Menu />} />
+      <Route path="/profile" element={<Test />} />
+      <Route path="/notifications" element={<Test />} />
+
+      <Route exact path="/" element={<Menu />} />
 
       {/* ***EXPERIMENTAL*** */}
       {/* <Route path="/example" element={<Example />} /> */}

@@ -1,3 +1,5 @@
+import { useLocation } from "react-router";
+
 import { Container, Item, Icon } from "./styled";
 import {
   challenge,
@@ -10,25 +12,30 @@ import {
   profile,
   notification,
   rank,
-  suitcase,
+  gift,
 } from "assets/icons";
 
 const NavBar = () => {
+  const location = useLocation();
+  const checkLocation = (path) => {
+    return location.pathname === `/${path}` ? "active" : "inactive";
+  };
+
   return (
     <Container>
-      <Item>
-        <Icon src={suitcase} alt="rewards" />
+      <Item active={checkLocation("reward")} to="/rewards">
+        <Icon src={gift} alt="rewards" />
       </Item>
-      <Item>
-        <Icon src={rank} alt="rank" />
+      <Item active={checkLocation("rank")} to="/rank">
+        <Icon src={challenge} alt="challenge" />
       </Item>
-      <Item active>
+      <Item active={checkLocation("")} to="/">
         <Icon src={console} alt="console" />
       </Item>
-      <Item>
+      <Item active={checkLocation("profile")} to="/profile">
         <Icon src={profile} alt="profile" />
       </Item>
-      <Item>
+      <Item active={checkLocation("notifications")} to="/notifications">
         <Icon src={notification} alt="notifications" />
       </Item>
     </Container>
