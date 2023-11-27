@@ -1,6 +1,6 @@
-import { Item, League, List, Meta } from "./components";
+import { Item, League, List, Meta } from "./components/";
 
-import { Container } from "./styled";
+import { Container } from "./styles/";
 
 const Rank = () => {
   return <Container>Rank</Container>;
