@@ -6,5 +6,11 @@ export const Container = styled.div`
   align-items: center;
 `;
 
-export const Icon = styled(SVG)``;
-export const Main = styled(SVG)``;
+export const Icon = styled(SVG)`
+  width: 4rem;
+  height: 4rem;
+`;
+export const Main = styled(SVG)`
+  width: 6rem;
+  height: 6rem;
+`;
