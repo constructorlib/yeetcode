@@ -1,4 +1,4 @@
-import { Item, League, List, Meta } from "./components/";
+import { Item, List, Meta } from "./components/";
 
 import { Container } from "./styles/";
 
