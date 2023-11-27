@@ -1,9 +1,9 @@
 export { default as bio } from "./bio.svg";
 export { default as challenge } from "./challenge.svg";
-export { default as challenge2 } from "./challenge2.svg";
 export { default as chem } from "./chem.svg";
 export { default as congrats } from "./congrats.svg";
 export { default as congrats2 } from "./congrats2.svg";
+export { default as console } from "./console.svg";
 export { default as diamond } from "./diamond.svg";
 export { default as discuss } from "./discuss.svg";
 export { default as fire } from "./fire.svg";

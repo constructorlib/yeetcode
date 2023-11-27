@@ -13,6 +13,7 @@ export const theme = css`
 
     --secondary-bg: #00af86;
     --secondary-bg-darker: #009470;
+    --secondary-text: #1bb0f4;
 
     /*
     --primary: #93d334;

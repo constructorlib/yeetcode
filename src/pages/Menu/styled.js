@@ -4,6 +4,7 @@ import { typography } from "styles/";
 export const Container = styled.div`
   width: 100dvw;
   height: calc(100dvh - 10rem);
+
   display: flex;
   flex-direction: column;
 
