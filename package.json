@@ -1,0 +1,46 @@
+{
+  "name": "sup",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "start": "vite --host",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite build && vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.13.3",
+    "@mui/styled-engine-sc": "^5.12.0",
+    "@react-oauth/google": "^0.11.0",
+    "axios": "^1.4.0",
+    "axios-jsonp": "^1.0.4",
+    "babel-plugin-styled-components": "^2.1.1",
+    "chart.js": "^4.3.3",
+    "framer-motion": "^10.16.1",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-inlinesvg": "^3.0.2",
+    "react-range": "^1.8.14",
+    "react-router": "^6.11.0",
+    "react-router-dom": "^6.11.0",
+    "styled-components": "^5.3.10",
+    "styled-icons": "^10.47.0",
+    "uuid": "^9.0.0",
+    "vite-plugin-pwa": "^0.14.7"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "vite": "^4.4.5"
+  }
+}
