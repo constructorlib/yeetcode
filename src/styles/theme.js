@@ -5,6 +5,7 @@ export const theme = css`
     //* Theme
 
     --dark-bg: #141f23;
+
     --dark-text: #ebf2f7;
     --dark-btn: #93d334;
     --dark-btn-text: #2a461b;

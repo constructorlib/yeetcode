@@ -7,6 +7,8 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+  width: 100dvw;
+  border-bottom: 1px solid var(--dark-btn-text-inactive);
 `;
 
 export const Title = styled.h1`

@@ -5,6 +5,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   border-radius: 1rem;
+  width: 100%;
 `;
 
 export const Item = styled.div`
@@ -12,13 +13,15 @@ export const Item = styled.div`
   flex-direction: column;
   align-items: center;
   align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
 `;
 export const Title = styled.div`
-  ${typography.headingMd}
+  ${typography.headingSm}
   color: var(--dark-text);
 `;
 export const Subtitle = styled.div`
-  ${typography.displayMd}
+  ${typography.captionSm_semibold}
   color: red;
   text-transform: capitalize;
 `;

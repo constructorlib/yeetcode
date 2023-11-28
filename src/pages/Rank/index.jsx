@@ -1,9 +1,14 @@
-import { Item, List, Meta } from "./components/";
+import { List, Hero } from "./components/";
 
 import { Container } from "./styles/";
 
 const Rank = () => {
-  return <Container>Rank</Container>;
+  return (
+    <Container>
+      <Hero />
+      <List />
+    </Container>
+  );
 };
 
 export default Rank;

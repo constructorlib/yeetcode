@@ -11,6 +11,8 @@ export const Container = styled.div`
   align-items: center;
   padding: 3rem 1rem;
   background-color: var(--dark-bg);
+
+  border-top: 1px solid var(--dark-btn-text-inactive);
 `;
 
 export const Item = styled(Link)`

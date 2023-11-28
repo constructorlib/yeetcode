@@ -1,7 +1,8 @@
 import { Container } from "../styles/List";
-import { Item } from "./Item";
+import Item from "./Item";
 
 const data = [
+  { id: 0, name: "Kairyly", score: 100, avatar: "https://avatars.githubusercontent.com/u/1234" },
   { id: 1, name: "Abbas", score: 100, avatar: "https://avatars.githubusercontent.com/u/1234" },
   { id: 2, name: "Kairyly", score: 100, avatar: "https://avatars.githubusercontent.com/u/1234" },
   { id: 3, name: "Prof.", score: 100, avatar: "https://avatars.githubusercontent.com/u/1234" },
@@ -31,7 +32,6 @@ const data = [
   { id: 27, name: "Kairyly", score: 100, avatar: "https://avatars.githubusercontent.com/u/1234" },
   { id: 28, name: "Prof.", score: 100, avatar: "https://avatars.githubusercontent.com/u/1234" },
   { id: 29, name: "Abbas", score: 100, avatar: "https://avatars.githubusercontent.com/u/1234" },
-  { id: 30, name: "Kairyly", score: 100, avatar: "https://avatars.githubusercontent.com/u/1234" },
 ];
 
 const List = () => {
