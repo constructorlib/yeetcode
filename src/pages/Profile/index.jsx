@@ -62,6 +62,25 @@ export const LineFollow = styled.div`
   text-align: left;
   color: #5fbdff;
 `;
+export const PfBottom = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+`;
+export const Button1 = styled.div`
+  color: #5fbdff;
+  cursor: pointer;
+  border: 1px solid #5fbdff;
+  height: 35px;
+  width: 55%;
+`;
+export const Button2 = styled.div`
+  color: #5fbdff;
+  cursor: pointer;
+  border: 1px solid #5fbdff;
+  height: 35px;
+  width: 20%;
+`;
 const Profile = () => {
   return (
     <Container>
@@ -81,14 +100,16 @@ const Profile = () => {
       </ImgDiv>
       <PfTop>
         <LeftPf>
-          <h2 style={{ color: "white" }}>Azizbek</h2>
-          <p style={{ fontSize: "12px", color: "lightgrey" }}>typosbro</p>
-          <p style={{ fontSize: "12px", color: "lightgrey" }}>
+          <h1 style={{ color: "white" }}>Azizbek</h1>
+          <p style={{ fontSize: "15px", color: "lightgrey" }}>typosbro</p>
+          <p style={{ fontSize: "15px", color: "lightgrey" }}>
             coolcoder@gmail.com
           </p>
           <LineFollow>
-            <p style={{ marginRight: "5px" }}>31 Following </p>
-            <p> 8 Followers</p>
+            <p style={{ marginRight: "5px", fontSize: "15px" }}>
+              31 Following{" "}
+            </p>
+            <p style={{ fontSize: "15px" }}> 8 Followers</p>
           </LineFollow>
         </LeftPf>
         <RightPf>
@@ -97,6 +118,10 @@ const Profile = () => {
           <Icon src={bell} alt="bell" />
         </RightPf>
       </PfTop>
+      <PfBottom>
+        <Button1 />
+        <Button2 />
+      </PfBottom>
     </Container>
   );
 };
