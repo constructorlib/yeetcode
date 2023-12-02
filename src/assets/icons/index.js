@@ -35,3 +35,5 @@ export { default as bell } from "./bell.svg";
 export { default as guy } from "./guy.svg";
 export { default as avatar2 } from "./avatar2.svg";
 export { default as cogwheel } from "./cogwheel.svg";
+export { default as addfriend } from "./addfriend.svg";
+export { default as upload } from "./upload.svg";

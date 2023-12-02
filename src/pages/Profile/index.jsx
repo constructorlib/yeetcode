@@ -1,5 +1,13 @@
 import styled from "styled-components";
-import { uzbekistan, japan, bell, avatar2, cogwheel } from "assets/icons";
+import {
+  uzbekistan,
+  japan,
+  bell,
+  avatar2,
+  cogwheel,
+  addfriend,
+  upload,
+} from "assets/icons";
 import SVG from "react-inlinesvg";
 
 const Container = styled.div`
@@ -71,8 +79,13 @@ export const Button1 = styled.div`
   color: #5fbdff;
   cursor: pointer;
   border: 1px solid #5fbdff;
-  height: 35px;
   width: 55%;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  height: 35px;
 `;
 export const Button2 = styled.div`
   color: #5fbdff;
@@ -80,6 +93,10 @@ export const Button2 = styled.div`
   border: 1px solid #5fbdff;
   height: 35px;
   width: 20%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
 `;
 const Profile = () => {
   return (
@@ -95,7 +112,7 @@ const Profile = () => {
           alt="profile"
         />
         <TopWheel>
-          <IconWheel src={cogwheel} alt="bell" />
+          <IconWheel src={cogwheel} alt="cogwheel" />
         </TopWheel>
       </ImgDiv>
       <PfTop>
@@ -119,9 +136,15 @@ const Profile = () => {
         </RightPf>
       </PfTop>
       <PfBottom>
-        <Button1 />
-        <Button2 />
+        <Button1>
+          <IconWheel src={addfriend} alt="cogwheel" />
+          <h2>ADD FRIEND</h2>
+        </Button1>
+        <Button2>
+          <IconWheel style={{ color: "white" }} src={upload} alt="upload" />
+        </Button2>
       </PfBottom>
+      <hr style={{ marginTop: "15px", backgroundColor: "#5fbdff" }} />
     </Container>
   );
 };
