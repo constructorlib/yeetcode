@@ -32,3 +32,5 @@ export { default as yellowDiamond } from "./yellow-diamond.svg";
 export { default as uzbekistan } from "./uzbekistan.svg";
 export { default as japan } from "./japan.svg";
 export { default as bell } from "./bell.svg";
+export { default as guy } from "./guy.svg";
+export { default as avatar2 } from "./avatar2.svg";

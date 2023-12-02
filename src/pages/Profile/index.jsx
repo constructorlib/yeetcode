@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { uzbekistan, japan, bell } from "assets/icons";
+import { uzbekistan, japan, bell, avatar2 } from "assets/icons";
 import SVG from "react-inlinesvg";
 
 const Container = styled.div`
@@ -16,11 +16,13 @@ const ImgDiv = styled.div`
   width: 100dvw;
   height: 150px;
   border: 1px solid black;
-  background-color: #fff;
+  background-color: lightgrey;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 `;
 const Img = styled.div`
   width: 100dvw;
-  background-size: cover;
 `;
 const PfTop = styled.div`
   width: 100dvw;
@@ -48,7 +50,15 @@ const Profile = () => {
   return (
     <Container>
       <ImgDiv>
-        <Img>Smart kid stock photo</Img>
+        <img
+          style={{
+            objectFit: "cover",
+            width: "150px",
+            height: "150px",
+          }}
+          src={avatar2}
+          alt="profile"
+        />
       </ImgDiv>
       <PfTop>
         <LeftPf>
