@@ -11,8 +11,4 @@ const Container = styled.div`
   background-color: var(--secondary-bg);
 `;
 
-const Profile = () => {
-  return <Container> Hello</Container>;
-};
-
-export default Profile;
+export default Container;
