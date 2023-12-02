@@ -19,6 +19,7 @@ import {
   IconWheel,
   Button1,
   Button2,
+  PfBottom,
 } from "./styled";
 
 const Profile = () => {
