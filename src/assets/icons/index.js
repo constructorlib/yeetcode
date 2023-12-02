@@ -29,3 +29,6 @@ export { default as tech } from "./tech.svg";
 export { default as third } from "./third.svg";
 export { default as trophy } from "./trophy.svg";
 export { default as yellowDiamond } from "./yellow-diamond.svg";
+export { default as uzbekistan } from "./uzbekistan.svg";
+export { default as japan } from "./japan.svg";
+export { default as bell } from "./bell.svg";
