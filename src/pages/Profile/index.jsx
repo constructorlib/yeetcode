@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { uzbekistan, japan, bell, avatar2 } from "assets/icons";
+import { uzbekistan, japan, bell, avatar2, cogwheel } from "assets/icons";
 import SVG from "react-inlinesvg";
 
 const Container = styled.div`
@@ -46,6 +46,18 @@ export const Icon = styled(SVG)`
   width: 3rem;
   height: 3rem;
 `;
+export const TopWheel = styled.div`
+  width: 12px;
+  height: 12px;
+  position: fixed;
+  right: 25px;
+  top: 10px;
+`;
+export const IconWheel = styled(SVG)`
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+`;
 const Profile = () => {
   return (
     <Container>
@@ -59,6 +71,9 @@ const Profile = () => {
           src={avatar2}
           alt="profile"
         />
+        <TopWheel>
+          <IconWheel src={cogwheel} alt="bell" />
+        </TopWheel>
       </ImgDiv>
       <PfTop>
         <LeftPf>

@@ -34,3 +34,4 @@ export { default as japan } from "./japan.svg";
 export { default as bell } from "./bell.svg";
 export { default as guy } from "./guy.svg";
 export { default as avatar2 } from "./avatar2.svg";
+export { default as cogwheel } from "./cogwheel.svg";
