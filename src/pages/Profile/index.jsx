@@ -20,6 +20,9 @@ import {
   Button1,
   Button2,
   PfBottom,
+  CardWrapper,
+  Card,
+  CardColumn,
 } from "./styled";
 
 const Profile = () => {
@@ -68,7 +71,23 @@ const Profile = () => {
           <IconWheel style={{ color: "white" }} src={upload} alt="upload" />
         </Button2>
       </PfBottom>
-      <hr style={{ marginTop: "15px", backgroundColor: "#5fbdff" }} />
+      <hr
+        style={{
+          marginTop: "15px",
+          marginBottom: "5px",
+          backgroundColor: "#5fbdff",
+        }}
+      />
+      <CardWrapper>
+        <CardColumn>
+          <Card />
+          <Card />
+        </CardColumn>
+        <CardColumn>
+          <Card />
+          <Card />
+        </CardColumn>
+      </CardWrapper>
     </Container>
   );
 };

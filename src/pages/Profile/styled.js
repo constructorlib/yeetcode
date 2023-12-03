@@ -90,3 +90,20 @@ export const Button2 = styled.div`
   padding: 5px;
   box-shadow: 4px 4px black;
 `;
+
+export const CardWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+`;
+export const CardColumn = styled.div`
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Card = styled.div`
+  background-color: #fff;
+  height: 90px;
+  margin-top: 5px;
+`;
