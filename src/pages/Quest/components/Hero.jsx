@@ -1,7 +1,21 @@
-import { Container } from "../styles/Hero";
+import { gaza } from "assets/icons/";
+import { Container, Title, Subtitle, Span, MetaWrapper, Meta, Image } from "../styles/Hero";
+import { ProgressBar } from "./";
 
 const Hero = () => {
-  return <Container>Hero</Container>;
+  return (
+    <Container>
+      <MetaWrapper>
+        <Meta>
+          <Subtitle>December</Subtitle>
+          <Title>Free Palestine March</Title>
+          <Span> 20 days</Span>
+        </Meta>
+        <Image src={gaza} />
+      </MetaWrapper>
+      <ProgressBar />
+    </Container>
+  );
 };
 
 export default Hero;

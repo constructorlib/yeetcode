@@ -8,5 +8,22 @@ export const Container = styled.div`
   align-items: center;
   width: 100%;
   padding: 2rem;
-  background-color: #448b2d;
+  background-color: #560404;
 `;
+export const MetaWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+export const Meta = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Image = styled(SVG)`
+  width: 12rem;
+  height: 12rem;
+`;
+
+export const Subtitle = styled.div``;
+export const Title = styled.h1``;
+export const Span = styled.span``;
