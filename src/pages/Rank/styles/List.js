@@ -6,8 +6,14 @@ export const Container = styled.div`
   align-items: center;
   overflow-y: auto;
   width: 100%;
-  padding: 1rem;
-  gap: 1rem;
+  padding: 1rem 0;
+  /* gap: 1rem; */
+  /* hide scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const Title = styled.h1``;

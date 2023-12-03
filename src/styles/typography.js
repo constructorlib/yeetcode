@@ -55,6 +55,13 @@ const captionMd = css`
   font-size: 14px;
 `;
 
+const captionMd_semibold = css`
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 20px;
+  font-size: 14px;
+`;
+
 const captionSm_semibold = css`
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -90,6 +97,7 @@ const buttonLg = css`
   font-weight: 500;
   line-height: 24px;
   font-size: 18px;
+  letter-spacing: 1px;
 `;
 
 const buttonMd = css`
@@ -107,6 +115,7 @@ export default {
   body_semibold,
   body_regular,
   captionMd,
+  captionMd_semibold,
   captionSm_semibold,
   captionSm,
   displayLg,
