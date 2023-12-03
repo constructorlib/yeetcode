@@ -28,6 +28,7 @@ import {
   Card,
   CardColumn,
   WrapperI,
+  Paragraph,
 } from "./styled";
 
 const Profile = () => {
@@ -50,15 +51,11 @@ const Profile = () => {
       <PfTop>
         <LeftPf>
           <h1 style={{ color: "white" }}>Azizbek</h1>
-          <p style={{ fontSize: "15px", color: "lightgrey" }}>typosbro</p>
-          <p style={{ fontSize: "15px", color: "lightgrey" }}>
-            coolcoder@gmail.com
-          </p>
+          <Paragraph>typosbro</Paragraph>
+          <Paragraph>coolcoder@gmail.com</Paragraph>
           <LineFollow>
-            <p style={{ marginRight: "5px", fontSize: "15px" }}>
-              31 Following{" "}
-            </p>
-            <p style={{ fontSize: "15px" }}> 8 Followers</p>
+            <Paragraph>31 Following {"    "}</Paragraph>
+            <Paragraph> 8 Followers</Paragraph>
           </LineFollow>
         </LeftPf>
         <RightPf>

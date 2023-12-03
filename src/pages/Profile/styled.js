@@ -31,7 +31,10 @@ export const LeftPf = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
+  color: lightgrey;
+  font-size: 15px;
 `;
+
 export const RightPf = styled.div`
   width: 45%;
   display: flex;
@@ -56,9 +59,14 @@ export const IconWheel = styled(SVG)`
 `;
 export const LineFollow = styled.div`
   display: flex;
+  font-size: 15px;
   margin-top: 5px;
-  text-align: left;
   color: #5fbdff;
+  width: 105%;
+  justify-content: space-evenly;
+`;
+export const Paragraph = styled.div`
+  margin-right: 5px;
 `;
 export const PfBottom = styled.div`
   display: flex;
