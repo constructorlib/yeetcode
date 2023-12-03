@@ -6,6 +6,10 @@ import {
   cogwheel,
   addfriend,
   upload,
+  bolt,
+  fire,
+  gold,
+  trophy,
 } from "assets/icons";
 import {
   Container,
@@ -80,12 +84,26 @@ const Profile = () => {
       />
       <CardWrapper>
         <CardColumn>
-          <Card />
-          <Card />
+          <Card>
+            <Icon src={fire} alt="fire" />
+            12
+            <p>day streak</p>
+          </Card>
+          <Card>
+            <Icon src={gold} alt="goldmedal" />
+            Gold
+            <p>Current league</p>
+          </Card>
         </CardColumn>
         <CardColumn>
-          <Card />
-          <Card />
+          <Card>
+            <Icon src={bolt} alt="bolt" />
+            5406
+            <p>Total XP</p>
+          </Card>
+          <Card>
+            <Icon src={trophy} alt="trophy" />2<p>Top 3 finishes</p>
+          </Card>
         </CardColumn>
       </CardWrapper>
     </Container>

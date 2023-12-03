@@ -104,6 +104,7 @@ export const CardColumn = styled.div`
 
 export const Card = styled.div`
   background-color: #fff;
-  height: 90px;
-  margin-top: 5px;
+  height: 80px;
+  margin-top: 10px;
+  border-radius: 9px;
 `;
