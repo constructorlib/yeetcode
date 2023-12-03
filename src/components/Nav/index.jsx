@@ -11,8 +11,8 @@ const NavBar = () => {
 
   return (
     <Container>
-      <Item active={checkLocation("reward")} to="/rewards">
-        <Icon src={gift} alt="rewards" />
+      <Item active={checkLocation("quest")} to="/quest">
+        <Icon src={gift} alt="quest" />
       </Item>
       <Item active={checkLocation("rank")} to="/rank">
         <Icon src={challenge} alt="challenge" />

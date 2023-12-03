@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { Test, Menu, Rank, Rewards, Notifications, Profile } from "pages/";
+import { Test, Menu, Rank, Quest, Notifications, Profile } from "pages/";
 
 import { Header, Nav } from "components/";
 
@@ -16,7 +16,7 @@ const Courses = () => {
 const _pages = () => {
   return (
     <Routes>
-      <Route path="/rewards" element={<Rewards />} />
+      <Route path="/quest" element={<Quest />} />
       <Route path="/rank" element={<Rank />} />
       <Route path="/course" element={<Courses />} />
       <Route path="/profile" element={<Profile />} />

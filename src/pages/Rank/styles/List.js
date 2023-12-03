@@ -44,10 +44,6 @@ export const Icon = styled(SVG)`
     #d47ff8 1.5rem,
     #d47ff8 3rem
   );
-
-  /* #d290fe */
-  /* #d47ff8 */
-  /*  */
 `;
 export const Text = styled.div`
   ${typography.buttonMd}

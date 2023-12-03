@@ -31,7 +31,7 @@ import {
   Paragraph,
   ParaInWrap,
   H1InWrap,
-} from "./styled";
+} from "./styles/";
 
 const Profile = () => {
   return (
@@ -63,11 +63,7 @@ const Profile = () => {
         <RightPf>
           <Icon src={uzbekistan} alt="uzbekistan" />
           <Icon src={japan} alt="japan" />
-          <Icon
-            src={bell}
-            alt="bell"
-            style={{ height: "2.6rem", marginTop: "1px" }}
-          />
+          <Icon src={bell} alt="bell" style={{ height: "2.6rem", marginTop: "1px" }} />
         </RightPf>
       </PfTop>
       <PfBottom>
