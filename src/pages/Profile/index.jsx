@@ -27,6 +27,7 @@ import {
   CardWrapper,
   Card,
   CardColumn,
+  WrapperI,
 } from "./styled";
 
 const Profile = () => {
@@ -85,24 +86,34 @@ const Profile = () => {
       <CardWrapper>
         <CardColumn>
           <Card>
-            <Icon src={fire} alt="fire" />
-            12
-            <p>day streak</p>
+            <WrapperI>
+              <Icon src={fire} alt="fire" />
+              <h2 style={{ marginTop: "5px", marginRight: "9px" }}>12</h2>
+            </WrapperI>
+            <p style={{ marginLeft: "15px" }}>day streak</p>
           </Card>
           <Card>
-            <Icon src={gold} alt="goldmedal" />
-            Gold
-            <p>Current league</p>
+            <WrapperI>
+              <Icon src={gold} alt="goldmedal" />
+              <h2 style={{ marginTop: "5px" }}>Gold</h2>
+            </WrapperI>
+            <p style={{ marginLeft: "15px" }}>Current league</p>
           </Card>
         </CardColumn>
         <CardColumn>
           <Card>
-            <Icon src={bolt} alt="bolt" />
-            5406
-            <p>Total XP</p>
+            <WrapperI>
+              <Icon src={bolt} alt="bolt" />
+              <h2 style={{ marginTop: "5px" }}>5406</h2>
+            </WrapperI>
+            <p style={{ marginLeft: "15px" }}>Total XP</p>
           </Card>
           <Card>
-            <Icon src={trophy} alt="trophy" />2<p>Top 3 finishes</p>
+            <WrapperI>
+              <Icon src={trophy} alt="trophy" />
+              <h2 style={{ marginTop: "5px" }}>2</h2>
+            </WrapperI>
+            <p style={{ marginLeft: "15px" }}>Top 3 finishes</p>
           </Card>
         </CardColumn>
       </CardWrapper>

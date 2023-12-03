@@ -103,8 +103,19 @@ export const CardColumn = styled.div`
 `;
 
 export const Card = styled.div`
-  background-color: #fff;
   height: 80px;
   margin-top: 10px;
   border-radius: 9px;
+  border: 0.5px solid lightgrey;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  color: white;
+  box-shadow: 4px 4px black;
+`;
+export const WrapperI = styled.div`
+  display: flex;
+  margin: 5px;
+  justify-content: space-evenly;
+  width: 55%;
 `;
