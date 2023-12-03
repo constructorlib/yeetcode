@@ -13,6 +13,7 @@ export { default as gift } from "./gift.svg";
 export { default as gold } from "./gold.svg";
 export { default as heart } from "./heart.svg";
 export { default as home } from "./home.svg";
+export { default as lightning } from "./lightning.svg";
 export { default as math } from "./math.svg";
 export { default as medal } from "./medal.svg";
 export { default as money } from "./money.svg";
