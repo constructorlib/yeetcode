@@ -1,6 +1,15 @@
 import { gaza } from "assets/icons/";
-import { Container, Title, Subtitle, Span, MetaWrapper, Meta, Image } from "../styles/Hero";
-import { ProgressBar } from "./";
+import {
+  Container,
+  Title,
+  Subtitle,
+  Span,
+  MetaWrapper,
+  Meta,
+  Image,
+  TimeIcon,
+} from "../styles/Hero";
+import { Progress } from "./";
 
 const Hero = () => {
   return (
@@ -8,12 +17,16 @@ const Hero = () => {
       <MetaWrapper>
         <Meta>
           <Subtitle>December</Subtitle>
-          <Title>Free Palestine March</Title>
-          <Span> 20 days</Span>
+          <Title>Stop Genocide</Title>
+          <Title>Stop Bombing Gaza</Title>
+
+          <Span>
+            <TimeIcon /> 20 days
+          </Span>
         </Meta>
         <Image src={gaza} />
       </MetaWrapper>
-      <ProgressBar />
+      <Progress />
     </Container>
   );
 };

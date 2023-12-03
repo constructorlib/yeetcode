@@ -10,6 +10,10 @@ export const Container = styled.div`
   padding: 2rem;
   background-color: #448b2d;
 `;
-export const Subtitle = styled.div``;
 export const Title = styled.h1``;
-export const Span = styled.span``;
+export const Progress = styled.span``;
+export const Icon = styled(SVG)`
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+`;

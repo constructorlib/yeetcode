@@ -43,8 +43,8 @@ const body_semibold = css`
 const body_regular = css`
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  line-height: 20px;
-  font-size: 14px;
+  line-height: 18px;
+  font-size: 12px;
 `;
 
 //& CAPTION
