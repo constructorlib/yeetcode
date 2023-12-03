@@ -10,6 +10,7 @@ import {
   fire,
   gold,
   trophy,
+  testU,
 } from "assets/icons";
 import {
   Container,
@@ -77,11 +78,7 @@ const Profile = () => {
         </Button1>
         <Button2>
           {/* CHANGE THIS TOO */}
-          <IconWheel
-            style={{ backgroundColor: "white" }}
-            src={upload}
-            alt="upload"
-          />
+          <IconWheel src={testU} alt="upload" />
         </Button2>
       </PfBottom>
       <hr
