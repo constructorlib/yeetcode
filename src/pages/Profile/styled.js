@@ -127,3 +127,11 @@ export const WrapperI = styled.div`
   justify-content: space-evenly;
   width: 55%;
 `;
+export const ParaInWrap = styled.p`
+  margin-left: 15px;
+  font-size: 12px;
+`;
+export const H1InWrap = styled.h1`
+  margin-top: 5px;
+  margin-left: 5px;
+`;

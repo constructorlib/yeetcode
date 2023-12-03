@@ -29,6 +29,8 @@ import {
   CardColumn,
   WrapperI,
   Paragraph,
+  ParaInWrap,
+  H1InWrap,
 } from "./styled";
 
 const Profile = () => {
@@ -65,12 +67,21 @@ const Profile = () => {
         </RightPf>
       </PfTop>
       <PfBottom>
+        {/* CHANGE THIS PART HERE
+          When I push with inline css, they push apart for some reason. 
+          In styled.js it's set to space-evenly  
+        */}
         <Button1>
           <IconWheel src={addfriend} alt="cogwheel" />
-          <h2>ADD FRIEND</h2>
+          <h2 style={{ marginRight: "15px" }}>ADD FRIEND</h2>
         </Button1>
         <Button2>
-          <IconWheel style={{ color: "white" }} src={upload} alt="upload" />
+          {/* CHANGE THIS TOO */}
+          <IconWheel
+            style={{ backgroundColor: "white" }}
+            src={upload}
+            alt="upload"
+          />
         </Button2>
       </PfBottom>
       <hr
@@ -85,32 +96,32 @@ const Profile = () => {
           <Card>
             <WrapperI>
               <Icon src={fire} alt="fire" />
-              <h2 style={{ marginTop: "5px", marginRight: "9px" }}>12</h2>
+              <H1InWrap>12</H1InWrap>
             </WrapperI>
-            <p style={{ marginLeft: "15px" }}>day streak</p>
+            <ParaInWrap>day streak</ParaInWrap>
           </Card>
           <Card>
             <WrapperI>
               <Icon src={gold} alt="goldmedal" />
-              <h2 style={{ marginTop: "5px" }}>Gold</h2>
+              <H1InWrap>Gold</H1InWrap>
             </WrapperI>
-            <p style={{ marginLeft: "15px" }}>Current league</p>
+            <ParaInWrap>Current league</ParaInWrap>
           </Card>
         </CardColumn>
         <CardColumn>
           <Card>
             <WrapperI>
               <Icon src={bolt} alt="bolt" />
-              <h2 style={{ marginTop: "5px" }}>5406</h2>
+              <H1InWrap>5406</H1InWrap>
             </WrapperI>
-            <p style={{ marginLeft: "15px" }}>Total XP</p>
+            <ParaInWrap>Total XP</ParaInWrap>
           </Card>
           <Card>
             <WrapperI>
               <Icon src={trophy} alt="trophy" />
-              <h2 style={{ marginTop: "5px" }}>2</h2>
+              <H1InWrap>2</H1InWrap>
             </WrapperI>
-            <p style={{ marginLeft: "15px" }}>Top 3 finishes</p>
+            <ParaInWrap>Top 3 finishes</ParaInWrap>
           </Card>
         </CardColumn>
       </CardWrapper>
