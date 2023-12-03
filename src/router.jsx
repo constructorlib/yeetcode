@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { Test, Menu, Rank, Quest, Notifications, Profile } from "pages/";
+import { Test, Menu, Rank, Quest, Notification, Profile } from "pages/";
 
 import { Header, Nav } from "components/";
 
@@ -20,7 +20,7 @@ const _pages = () => {
       <Route path="/rank" element={<Rank />} />
       <Route path="/course" element={<Courses />} />
       <Route path="/profile" element={<Profile />} />
-      <Route path="/notifications" element={<Notifications />} />
+      <Route path="/notification" element={<Notification />} />
       <Route exact path="/" element={<Courses />} />
     </Routes>
   );

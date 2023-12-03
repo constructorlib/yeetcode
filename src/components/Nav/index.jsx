@@ -23,8 +23,8 @@ const NavBar = () => {
       <Item active={checkLocation("profile")} to="/profile">
         <Icon src={profile} alt="profile" />
       </Item>
-      <Item active={checkLocation("notifications")} to="/notifications">
-        <Icon src={notification} alt="notifications" />
+      <Item active={checkLocation("notification")} to="/notification">
+        <Icon src={notification} alt="notification" />
       </Item>
     </Container>
   );
