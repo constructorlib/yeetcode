@@ -1,16 +1,15 @@
 import {
   uzbekistan,
   japan,
-  bell,
   avatar2,
   cogwheel,
   addfriend,
-  upload,
   bolt,
   fire,
   gold,
   trophy,
-  testU,
+  bell,
+  upload,
 } from "assets/icons";
 import {
   Container,
@@ -64,7 +63,11 @@ const Profile = () => {
         <RightPf>
           <Icon src={uzbekistan} alt="uzbekistan" />
           <Icon src={japan} alt="japan" />
-          <Icon src={bell} alt="bell" />
+          <Icon
+            src={bell}
+            alt="bell"
+            style={{ height: "2.6rem", marginTop: "1px" }}
+          />
         </RightPf>
       </PfTop>
       <PfBottom>
@@ -78,7 +81,7 @@ const Profile = () => {
         </Button1>
         <Button2>
           {/* CHANGE THIS TOO */}
-          <IconWheel src={testU} alt="upload" />
+          <IconWheel src={upload} alt="upload" />
         </Button2>
       </PfBottom>
       <hr

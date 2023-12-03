@@ -38,4 +38,3 @@ export { default as cogwheel } from "./cogwheel.svg";
 export { default as addfriend } from "./addfriend.svg";
 export { default as upload } from "./upload.svg";
 export { default as bolt } from "./bolt.svg";
-export { default as testU } from "./testU.svg";
