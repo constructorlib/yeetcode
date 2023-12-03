@@ -9,6 +9,7 @@ export { default as diamond } from "./diamond.svg";
 export { default as discuss } from "./discuss.svg";
 export { default as fire } from "./fire.svg";
 export { default as first } from "./first.svg";
+export { default as gaza } from "./gaza.svg";
 export { default as gift } from "./gift.svg";
 export { default as gold } from "./gold.svg";
 export { default as heart } from "./heart.svg";
