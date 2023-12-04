@@ -7,11 +7,7 @@ const Quest = () => {
     <Container>
       <Hero />
       <DailyQuestList />
-      <FriendQuest />
-
-      {/* <div>
-        <Badge></Badge>
-      </div> */}
+      {/* <FriendQuest /> */}
     </Container>
   );
 };

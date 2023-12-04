@@ -19,6 +19,33 @@ export const List = styled.div`
   padding: 5rem 0 5rem 5rem;
   margin-top: auto;
   overflow-x: auto;
+
+  /* hide scrollbar */
+
+  scrollbar-width: none;
+
+  /* Firefox */
+
+  -ms-overflow-style: none;
+
+  /* IE 10+ */
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  /* Chrome */
+  & ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-thumb,
+  ::-webkit-scrollbar-corner,
+  ::-webkit-resizer,
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const Card = styled.div`

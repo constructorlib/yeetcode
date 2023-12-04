@@ -1,7 +1,9 @@
+export { default as alAqsa } from "./al-aqsa.svg";
 export { default as bio } from "./bio.svg";
 export { default as bronze } from "./bronze.svg";
 export { default as challenge } from "./challenge.svg";
 export { default as chem } from "./chem.svg";
+export { default as chest } from "./chest.svg";
 export { default as congrats } from "./congrats.svg";
 export { default as congrats2 } from "./congrats2.svg";
 export { default as console } from "./console.svg";
@@ -14,6 +16,7 @@ export { default as gaza } from "./gaza.svg";
 export { default as gift } from "./gift.svg";
 export { default as gold } from "./gold.svg";
 export { default as heart } from "./heart.svg";
+export { default as history } from "./history.svg";
 export { default as home } from "./home.svg";
 export { default as lightning } from "./lightning.svg";
 export { default as math } from "./math.svg";
