@@ -12,7 +12,16 @@ export default defineConfig({
     react({
       include: "**/*.{jsx,tsx, js}",
       babel: {
-        plugins: ["babel-plugin-styled-components"],
+        plugins: [
+          [
+            "babel-plugin-styled-components",
+            {
+              ssr: false,
+              displayName: true,
+              preprocess: false,
+            },
+          ],
+        ],
       },
     }),
     VitePWA({

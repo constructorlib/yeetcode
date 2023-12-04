@@ -1,4 +1,5 @@
-import { Container } from "../styles/List";
+import { Container, Wrapper, Button, Icon, Text } from "../styles/List";
+import { lightning } from "assets/icons/";
 import Item from "./Item";
 
 const data = [
@@ -40,6 +41,12 @@ const List = () => {
       {data.map((item) => (
         <Item key={item.id} {...item} />
       ))}
+      <Wrapper>
+        <Button>
+          <Icon src={lightning} />
+          <Text>4 days</Text>
+        </Button>
+      </Wrapper>
     </Container>
   );
 };

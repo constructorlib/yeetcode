@@ -11,8 +11,8 @@ const NavBar = () => {
 
   return (
     <Container>
-      <Item active={checkLocation("reward")} to="/rewards">
-        <Icon src={gift} alt="rewards" />
+      <Item active={checkLocation("quest")} to="/quest">
+        <Icon src={gift} alt="quest" />
       </Item>
       <Item active={checkLocation("rank")} to="/rank">
         <Icon src={challenge} alt="challenge" />
@@ -23,8 +23,8 @@ const NavBar = () => {
       <Item active={checkLocation("profile")} to="/profile">
         <Icon src={profile} alt="profile" />
       </Item>
-      <Item active={checkLocation("notifications")} to="/notifications">
-        <Icon src={notification} alt="notifications" />
+      <Item active={checkLocation("notification")} to="/notification">
+        <Icon src={notification} alt="notification" />
       </Item>
     </Container>
   );

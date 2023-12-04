@@ -4,13 +4,20 @@ import SVG from "react-inlinesvg";
 export const Container = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 `;
 
 export const Icon = styled(SVG)`
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
+  ${({ status }) =>
+    status === "inactive" &&
+    css`
+      filter: grayscale(100%);
+    `}
 `;
 export const Main = styled(SVG)`
-  width: 6rem;
-  height: 6rem;
+  width: 8rem;
+  height: 8rem;
 `;

@@ -1,4 +1,4 @@
-import { Container, Avatar, Icon, Text, Span, Number } from "../styles/Item";
+import { Container, Wrapper, Avatar, Icon, Text, Span, Number } from "../styles/Item";
 import { first, second, third } from "assets/icons/";
 
 const Item = ({ name, id, avatar, score }) => {
@@ -18,11 +18,11 @@ const Item = ({ name, id, avatar, score }) => {
   };
 
   return (
-    <Container>
-      {getAvatar()}
+    <Container status={id == 3 && "active"}>
+      <Wrapper>{getAvatar()}</Wrapper>
       <Avatar src={src} />
       <Text>{name}</Text>
-      <Span>{score}XP</Span>
+      <Span>{score} XP</Span>
     </Container>
   );
 };

@@ -7,8 +7,8 @@ const League = () => {
       <Icon src={bronze} />
       <Icon src={silver} />
       <Main src={gold} />
-      <Icon src={yellowDiamond} />
-      <Icon src={redDiamond} />
+      <Icon src={yellowDiamond} status="inactive" />
+      <Icon src={redDiamond} status="inactive" />
     </Container>
   );
 };
