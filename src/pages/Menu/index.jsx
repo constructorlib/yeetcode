@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import { Container, Card, List, Title, Subtitle, Progress, Button } from "./styled";
 
 const cards = [
@@ -29,6 +30,8 @@ const cards = [
 ];
 
 const Menu = () => {
+  const navigate = useNavigate();
+
   return (
     <Container>
       <List>
@@ -39,8 +42,12 @@ const Menu = () => {
               {c.done}/{c.total} UNITS
             </Subtitle>
             <Progress />
-            <Button bg="light">SEE DETAILS</Button>
-            <Button bg="dark">CONTINUE</Button>
+            <Button onClick={() => navigate("/detail")} bg="light">
+              SEE DETAILS
+            </Button>
+            <Button onClick={() => navigate("/test")} bg="dark">
+              CONTINUE
+            </Button>
           </Card>
         ))}
       </List>
