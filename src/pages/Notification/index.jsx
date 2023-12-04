@@ -1,5 +1,5 @@
 const Notification = () => {
-  return <div>Notification</div>;
+  return <div>Create feed here</div>;
 };
 
 export default Notification;
