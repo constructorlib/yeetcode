@@ -6,8 +6,8 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 1rem;
-  padding: 1.5rem 2rem;
+  gap: 1.5rem;
+  padding: 2rem;
   background-color: var(--dark-bg);
   border-radius: 1.5rem;
 `;
@@ -40,12 +40,15 @@ export const ProgressBar = styled.div`
     border-radius: 2rem;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    background: repeating-linear-gradient(
-      -45deg,
-      #ff0000,
-      #ff0000 1.5rem,
-      #8b0505 1.5rem,
-      #8b0505 3rem
+
+    background: linear-gradient(
+      45deg,
+      #e4312b 25%,
+      #000000 25%,
+      #000000 50%,
+      #ffffff 50%,
+      #ffffff 75%,
+      #149954 75%
     );
     position: absolute;
     left: 0;
@@ -54,8 +57,9 @@ export const ProgressBar = styled.div`
 export const Active = styled.div``;
 export const Icon = styled(SVG)`
   border-radius: 50%;
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
+  border: 0.2rem solid var(--dark-bg);
   right: 0;
   z-index: 999;
   position: absolute;
