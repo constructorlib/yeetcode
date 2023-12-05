@@ -20,3 +20,19 @@ export const Toph1 = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+export const MidWrapper = styled.div`
+  width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+`;
+
+export const FeedCard = styled.div`
+  width: 90%;
+  height: 200px;
+  background-color: white;
+  margin-top: 10px;
+  border-radius: 5px;
+`;
