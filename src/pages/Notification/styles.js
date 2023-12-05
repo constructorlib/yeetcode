@@ -8,7 +8,6 @@ export const Container = styled.div`
   flex-direction: column;
   position: relative;
   background-color: #31304d;
-  overflow-y: auto;
 `;
 
 export const Toph1 = styled.div`
@@ -39,4 +38,5 @@ export const FeedCard = styled.div`
   margin-top: 10px;
   border-radius: 5px;
   padding: 10px;
+  flex-shrink: 0;
 `;
