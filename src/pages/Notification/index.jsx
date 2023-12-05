@@ -10,6 +10,14 @@ const Notification = () => {
       <MidWrapper>
         <FeedCard></FeedCard>
         <FeedCard></FeedCard>
+        <FeedCard></FeedCard>
+        <FeedCard></FeedCard>
+        <FeedCard></FeedCard>
+        <FeedCard></FeedCard>
+        <FeedCard></FeedCard>
+        <FeedCard></FeedCard>
+        <FeedCard></FeedCard>
+        <FeedCard></FeedCard>
       </MidWrapper>
     </Container>
   );

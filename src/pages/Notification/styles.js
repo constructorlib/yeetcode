@@ -2,12 +2,13 @@ import SVG from "react-inlinesvg";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100dvw;
+  width: 100vw;
   height: calc(100dvh - 10rem);
   display: flex;
   flex-direction: column;
   position: relative;
   background-color: #31304d;
+  overflow-y: auto;
 `;
 
 export const Toph1 = styled.div`
@@ -22,17 +23,20 @@ export const Toph1 = styled.div`
 `;
 
 export const MidWrapper = styled.div`
-  width: 100dvw;
+  width: 100vw;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 `;
-
 export const FeedCard = styled.div`
   width: 90%;
   height: 200px;
   background-color: white;
   margin-top: 10px;
   border-radius: 5px;
+  padding: 10px;
 `;
