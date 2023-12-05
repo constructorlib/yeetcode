@@ -23,7 +23,8 @@ export const Toph1 = styled.div`
 
 export const MidWrapper = styled.div`
   width: 100vw;
-  max-height: 100vh;
+  /* max-height: 100vh; */
+  height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,7 +34,7 @@ export const MidWrapper = styled.div`
 `;
 export const FeedCard = styled.div`
   width: 90%;
-  height: 200px;
+  min-height: 200px;
   background-color: white;
   margin-top: 10px;
   border-radius: 5px;

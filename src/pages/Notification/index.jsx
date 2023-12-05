@@ -8,14 +8,7 @@ const Notification = () => {
       </Toph1>
 
       <MidWrapper>
-        <FeedCard></FeedCard>
-        <FeedCard></FeedCard>
-        <FeedCard></FeedCard>
-        <FeedCard></FeedCard>
-        <FeedCard></FeedCard>
-        <FeedCard></FeedCard>
-        <FeedCard></FeedCard>
-        <FeedCard></FeedCard>
+        <FeedCard style={{ marginTop: "100px" }}>123</FeedCard>
         <FeedCard></FeedCard>
         <FeedCard></FeedCard>
       </MidWrapper>
