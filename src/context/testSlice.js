@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk, current } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { boy1, boy3, boy4, boy5, girl2 } from "assets/icons/";
 
 const questionList = [
@@ -32,12 +32,6 @@ const questionList = [
   },
 ];
 
-export const init = createAsyncThunk("test/init", async (payload) => {
-  return { ...payload };
-});
-
-export const enableReverb = createAsyncThunk("test/reverb", async () => {});
-
 export const testSlice = createSlice({
   name: "test",
   initialState: {
@@ -51,7 +45,12 @@ export const testSlice = createSlice({
   reducers: {
     start(state) {},
     stop(state) {
-      state.end = true;
+      state.questionList = questionList;
+      state.currentQuestion = 0;
+      state.wrongQuestionList = [];
+      state.end = false;
+      state.score = 0;
+      state.isCorrect = null;
     },
     next(state) {
       if (state.currentQuestion === state.questionList.length - 1) {
@@ -71,62 +70,13 @@ export const testSlice = createSlice({
         state.isCorrect = true;
       } else {
         state.isCorrect = false;
-        console.log(state.wrongQuestionList);
-        console.log(currentQuestion);
         state.wrongQuestionList = [...state.wrongQuestionList, currentQuestion];
       }
     },
   },
-  //   extraReducers: (builder) => {
-  //     builder
-  //       .addCase(init.pending, (state) => {
-  //         return {
-  //           ...state,
-  //           player: {
-  //             ...state.player,
-  //             init: false,
-  //             playing: false,
-  //             time: 0,
-  //             duration: 0,
-  //             status: "pending",
-  //           },
-  //           audio: null,
-  //         };
-  //       })
-  //       .addCase(init.rejected, (state, action) => {
-  //         console.error(action?.error);
-  //         return {
-  //           ...state,
-  //           player: {
-  //             ...state.player,
-  //             init: false,
-  //             playing: false,
-  //             time: 0,
-  //             duration: 0,
-  //             status: "rejected",
-  //           },
-  //           audio: null,
-  //         };
-  //       })
-  //       .addCase(init.fulfilled, (state, action) => {
-  //         return {
-  //           ...state,
-  //           player: {
-  //             ...state.player,
-  //             init: true,
-  //             playing: true,
-  //             time: 0,
-  //             duration: action?.payload?.duration,
-  //             status: "fulfilled",
-  //           },
-  //           audio: action.payload,
-  //         };
-  //       });
-  //   },
 });
 
 // Action creators are generated for each case reducer function
 export const { start, stop, next, check } = testSlice.actions;
 
-// export { init, enableReverb };
 export default testSlice.reducer;

@@ -11,6 +11,3 @@ export function formatTime(seconds) {
 
   return leadingHours + `${padStart(minutes, 2, "0")}:${padStart(remainingSeconds, 2, "0")}`;
 }
-
-// console.log(formatTime(3661)); // "01:01:01"
-// console.log(formatTime(7200)); // "02:00:00"
