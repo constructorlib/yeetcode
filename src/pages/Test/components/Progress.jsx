@@ -14,7 +14,7 @@ import {
 
 import { heart } from "assets/icons/";
 
-const Progress = ({ meta }) => {
+const Progress = () => {
   const { questionList, currentQuestion, wrongQuestionList } = useSelector((state) => state.test);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ const Progress = ({ meta }) => {
         <DismissIcon />
       </DismissIconContainer>
 
-      <ProgressBar status={currentQuestion / (questionList.length + wrongQuestionList.length)} />
+      <ProgressBar status={currentQuestion / questionList.length} />
       <HeartIconContainer>
         <HeartIcon src={heart} /> {5 - wrongQuestionList.length}
       </HeartIconContainer>

@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 
 import { start, stop, next, check } from "context/testSlice";
+import { girl2 } from "assets/icons/";
 
 import { Container, Title, Text, Image, Wrapper } from "../styles/Question";
-import { boy1, boy3, boy4, boy5, girl2 } from "assets/icons/";
 
 const Question = () => {
   const { questionList, currentQuestion, wrongQuestionList } = useSelector((state) => state.test);
@@ -15,7 +15,7 @@ const Question = () => {
     <Container>
       <Title>Choose the correct option</Title>
       <Wrapper>
-        <Image src={girl2} alt="boy1" />
+        <Image src={questionList[currentQuestion]?.icon ?? girl2} alt="boy1" />
         <Text>{question}</Text>
       </Wrapper>
     </Container>

@@ -1,4 +1,5 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk, current } from "@reduxjs/toolkit";
+import { boy1, boy3, boy4, boy5, girl2 } from "assets/icons/";
 
 const questionList = [
   {
@@ -6,24 +7,28 @@ const questionList = [
     question: "What is the capital of France?",
     options: ["Paris", "Berlin", "London", "Madrid"],
     answer: "Paris",
+    icon: boy1,
   },
   {
     id: 2,
     question: "Who is CEO of Tesla?",
     options: ["Jeff Bezos", "Elon Musk", "Bill Gates", "Tony Stark"],
     answer: "Elon Musk",
+    icon: boy3,
   },
   {
     id: 3,
     question: "The iPhone was created by which company?",
     options: ["Apple", "Intel", "Amazon", "Microsoft"],
     answer: "Apple",
+    icon: boy4,
   },
   {
     id: 4,
     question: "How many Harry Potter books are there?",
     options: ["1", "4", "6", "7"],
     answer: "7",
+    icon: boy5,
   },
 ];
 
@@ -49,6 +54,18 @@ export const testSlice = createSlice({
       state.end = true;
     },
     next(state) {
+      if (
+        state.currentQuestion === state.questionList.length - 1 &&
+        state.wrongQuestionList.length === 0
+      ) {
+        state.end = true;
+        return;
+      }
+      // if (state.wrongQuestionList.length > 0) {
+      //   state.currentQuestion = state.wrongQuestionList[0];
+      //   state.wrongQuestionList.shift();
+      // }
+
       state.currentQuestion++;
       state.isCorrect = null;
     },
