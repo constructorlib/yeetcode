@@ -30,6 +30,13 @@ const questionList = [
     answer: "7",
     icon: boy5,
   },
+  {
+    id: 5,
+    question: "Where is Palestine located on the map, and what countries surround it",
+    options: ["Europe", "South America", "Middle East", "Africa"],
+    answer: "Middle East",
+    icon: girl2,
+  },
 ];
 
 export const testSlice = createSlice({
@@ -43,7 +50,9 @@ export const testSlice = createSlice({
     isCorrect: null,
   },
   reducers: {
-    start(state) {},
+    start(state, action) {
+      state.questionList = action.payload;
+    },
     stop(state) {
       state.questionList = questionList;
       state.currentQuestion = 0;

@@ -271,10 +271,15 @@ export const profileSlice = createSlice({
       );
       state.list[3] = state.account;
     },
+
+    setScore(state, action) {
+      state.account.score += action.payload;
+      state.list[3] = state.account;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { setCurrent, follow, unfollow } = profileSlice.actions;
+export const { setCurrent, follow, unfollow, setScore } = profileSlice.actions;
 
 export default profileSlice.reducer;
