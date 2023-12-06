@@ -3,27 +3,27 @@ import { Container, Card, List, Title, Subtitle, Progress, Button } from "./styl
 
 const cards = [
   {
-    title: "Section 1: Rookie",
+    title: "Section 1: Arithmetic",
     done: 5,
     total: 8,
   },
   {
-    title: "Section 2: Explorer",
+    title: "Section 2: Algebra",
     done: 0,
     total: 20,
   },
   {
-    title: "Section 3: Traveler",
+    title: "Section 3: Trigonometry",
     done: 0,
     total: 28,
   },
   {
-    title: "Section 4: Champion",
+    title: "Section 4: Geometry",
     done: 0,
     total: 8,
   },
   {
-    title: "Section 5: Refresh",
+    title: "Section 5: Calculus 1",
     done: 0,
     total: 6,
   },

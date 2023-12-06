@@ -13,32 +13,34 @@ import {
   Header,
   Image,
 } from "../styles/Card";
+import { useSelector } from "react-redux";
 
-import { celebrate, congrats, congrats2 } from "assets/icons/";
-
-const Card = ({ name }) => {
+const Card = ({ name, time, message, img }) => {
   const [select, setSelect] = useState(false);
 
-  const src = `https://api.dicebear.com/7.x/personas/svg?seed=${
-    name ?? "typosbro_"
-  }&&backgroundColor=b6e3f4,c0aede,d1d4f9`;
+  const { account } = useSelector((state) => state.profile);
+
+  const getAvatar = (name, bg) =>
+    `https://api.dicebear.com/7.x/personas/svg?seed=${name ?? "typosbro_"}&&backgroundColor=${
+      bg ?? "F8BBD0,b6e3f4,E91E63,c0aede,d1d4f9"
+    }`;
 
   return (
     <Container>
       <Header>
         <Main>
-          <Avatar src={src} />
-          <Title>Kumar</Title>
-          <Subtitle>13 hours</Subtitle>
-          <Message>Earned a total of 2000 XP</Message>
+          <Avatar src={getAvatar(name)} />
+          <Title>{name}</Title>
+          <Subtitle>{time}</Subtitle>
+          <Message>{message}</Message>
         </Main>
-        <Image src={congrats} />
+        <Image src={img} />
       </Header>
       <Button status={String(select)} onClick={() => setSelect((prev) => !prev)}>
         {select ? "Celebrated" : "Celebrate"}
       </Button>
       <Comment>
-        <Pfp src={src} />
+        <Pfp src={getAvatar(account.name, "d1d4f9")} />
         <Input placeholder="Add a comment..." />
       </Comment>
     </Container>
