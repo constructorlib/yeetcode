@@ -54,17 +54,10 @@ export const testSlice = createSlice({
       state.end = true;
     },
     next(state) {
-      if (
-        state.currentQuestion === state.questionList.length - 1 &&
-        state.wrongQuestionList.length === 0
-      ) {
+      if (state.currentQuestion === state.questionList.length - 1) {
         state.end = true;
         return;
       }
-      // if (state.wrongQuestionList.length > 0) {
-      //   state.currentQuestion = state.wrongQuestionList[0];
-      //   state.wrongQuestionList.shift();
-      // }
 
       state.currentQuestion++;
       state.isCorrect = null;
