@@ -1,8 +1,15 @@
+import { useDispatch, useSelector } from "react-redux";
+import { setCurrent } from "context/profileSlice";
 import { Container, Wrapper, Avatar, Icon, Text, Span, Number } from "../styles/Item";
 import { first, second, third } from "assets/icons/";
+import { useNavigate } from "react-router";
 
-const Item = ({ name, id, avatar, score }) => {
-  const src = `https://api.dicebear.com/7.x/bottts-neutral/svg?seed=${name}&&scale=65`;
+const Item = ({ name, id, score }) => {
+  const { account } = useSelector((state) => state.profile);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const src = `https://api.dicebear.com/7.x/personas/svg?seed=${name}&&backgroundColor=b6e3f4,c0aede,d1d4f9`;
 
   const getAvatar = () => {
     switch (id) {
@@ -17,8 +24,13 @@ const Item = ({ name, id, avatar, score }) => {
     }
   };
 
+  const handleClick = () => {
+    dispatch(setCurrent({ id, name, score }));
+    navigate("/profile");
+  };
+
   return (
-    <Container status={id == 3 && "active"}>
+    <Container onClick={handleClick} status={account.id === id && "active"}>
       <Wrapper>{getAvatar()}</Wrapper>
       <Avatar src={src} />
       <Text>{name}</Text>
