@@ -5,11 +5,11 @@ import { useSelector } from "react-redux";
 
 const List = () => {
   const { list, current, account } = useSelector((state) => state.profile);
-
+  const sortedList = [...list].sort((a, b) => b.score - a.score);
   return (
     <Container>
-      {list.map((item) => (
-        <Item key={item.id} {...item} />
+      {sortedList.map((item, rank) => (
+        <Item key={item.id} {...item} rank={rank} />
       ))}
       <Wrapper>
         <Button>

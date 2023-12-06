@@ -20,34 +20,21 @@ import {
   Button,
 } from "../styles/CheckModal";
 import { useNavigate } from "react-router";
+import { useEffect } from "react";
+import { setScore } from "context/profileSlice";
 
 const CheckModal = () => {
-  const stats = [
-    {
-      color: "#feca00",
-      title: "Total XP",
-      value: 23,
-      icon: <StatsIcon src={lightning} />,
-    },
-    {
-      color: "#49c0f8",
-      title: "Quick",
-      value: "03:08",
-      icon: <TimeIcon />,
-    },
-    {
-      color: "#91d436",
-      title: "Good",
-      value: "84%",
-      icon: <CheckIcon />,
-    },
-  ];
-
   const { questionList, currentQuestion, wrongQuestionList, score } = useSelector(
     (state) => state.test
   );
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const reward = Math.round((score / questionList.length) * 10) * 10;
+
+  useEffect(() => {
+    dispatch(setScore(reward));
+  }, []);
 
   const handleContinue = () => {
     dispatch(stop());
@@ -67,7 +54,7 @@ const CheckModal = () => {
             <StatsTitle>Total XP</StatsTitle>
             <StatsValue color="#feca00">
               <StatsIcon src={lightning} />
-              {Math.round((score / questionList.length) * 10) * 10}
+              {reward}
             </StatsValue>
           </StatsItem>
           <StatsItem color="#49c0f8">
