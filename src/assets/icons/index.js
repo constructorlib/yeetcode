@@ -1,5 +1,10 @@
 export { default as alAqsa } from "./al-aqsa.svg";
 export { default as bio } from "./bio.svg";
+export { default as boy1 } from "./boy1.svg";
+export { default as boy2 } from "./boy2.svg";
+export { default as boy3 } from "./boy3.svg";
+export { default as boy4 } from "./boy4.svg";
+export { default as boy5 } from "./boy5.svg";
 export { default as bronze } from "./bronze.svg";
 export { default as challenge } from "./challenge.svg";
 export { default as chem } from "./chem.svg";
@@ -14,6 +19,7 @@ export { default as first } from "./first.svg";
 export { default as palestine } from "./palestine.svg";
 export { default as gaza } from "./gaza.svg";
 export { default as gift } from "./gift.svg";
+export { default as girl2 } from "./girl2.svg";
 export { default as gold } from "./gold.svg";
 export { default as heart } from "./heart.svg";
 export { default as history } from "./history.svg";
