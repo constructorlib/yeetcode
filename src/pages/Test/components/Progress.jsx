@@ -19,9 +19,14 @@ const Progress = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const handleDismiss = () => {
+    dispatch(stop());
+    navigate("/");
+  };
+
   return (
     <Container>
-      <DismissIconContainer onClick={() => navigate("/")}>
+      <DismissIconContainer onClick={handleDismiss}>
         <DismissIcon />
       </DismissIconContainer>
 

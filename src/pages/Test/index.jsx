@@ -9,7 +9,7 @@ export const Test = () => {
   const { end } = useSelector((state) => state.test);
   return (
     <Container>
-      {!end ? (
+      {end ? (
         <CheckModal />
       ) : (
         <>
