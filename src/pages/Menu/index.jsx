@@ -36,7 +36,7 @@ const Menu = () => {
     <Container>
       <List>
         {cards.map((c) => (
-          <Card>
+          <Card key={c.title}>
             <Title>{c.title}</Title>
             <Subtitle>
               {c.done}/{c.total} UNITS

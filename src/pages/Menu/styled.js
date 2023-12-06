@@ -75,7 +75,6 @@ export const Subtitle = styled.div`
 export const Button = styled.div`
   ${typography.buttonLg}
   text-transform: capitalize;
-  ${({ bg }) => console.log(bg)}
 
   display: grid;
   place-content: center;
