@@ -11,6 +11,7 @@ export const theme = css`
     --dark-btn-text: #2a461b;
     --dark-btn-inactive: #38464f;
     --dark-btn-text-inactive: #54656d;
+    --dark-btn-error: #e63946;
 
     --secondary-bg: #00af86;
     --secondary-bg-darker: #009470;

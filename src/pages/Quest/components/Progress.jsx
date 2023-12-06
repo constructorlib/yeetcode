@@ -5,8 +5,8 @@ const Progress = () => {
   return (
     <Container>
       <Title>Complete 30 quests!</Title>
-      <ProgressBar status={10 / 30}>
-        10 / 30
+      <ProgressBar status={12 / 30}>
+        <Active>12 / 30</Active>
         <Icon src={palestine} />
       </ProgressBar>
     </Container>

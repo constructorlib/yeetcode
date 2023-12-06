@@ -10,6 +10,7 @@
       "@/*": ["src/*"],
       "assets": ["./src/assets/*"],
       "components": ["./src/components/*"],
+      "context": ["./src/context/*"],
       "exp": ["src/exp/*"],
       "pages": ["./src/pages/*"],
       "styles": ["./src/styles/*"],

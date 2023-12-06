@@ -21,6 +21,8 @@ const _pages = () => {
       <Route path="/course" element={<Courses />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/notification" element={<Notification />} />
+      <Route path="/test" element={<Test />} />
+
       <Route exact path="/" element={<Courses />} />
     </Routes>
   );
