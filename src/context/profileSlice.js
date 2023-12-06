@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 
 const data = [
   {
@@ -260,6 +260,7 @@ export const profileSlice = createSlice({
       const { id } = action.payload;
       state.account.following.push(id);
       state.list[id].followers.push(state.account.id);
+      state.list[3] = state.account;
     },
 
     unfollow(state, action) {
@@ -268,6 +269,7 @@ export const profileSlice = createSlice({
       state.list[id].followers = state.list[id].followers.filter(
         (item) => item !== state.account.id
       );
+      state.list[3] = state.account;
     },
   },
 });
