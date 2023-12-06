@@ -8,16 +8,13 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  background-color: #31304d;
+  background-color: var(--dark-bg);
 `;
-export const ImgDiv = styled.div`
+export const Image = styled.img`
   width: 100dvw;
-  height: 150px;
-  border: 1px solid black;
-  background-color: #f0ece5;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
+  height: 20rem;
+  object-fit: contain;
+  background-color: #b6e3f4;
 `;
 
 export const PfTop = styled.div`
@@ -41,18 +38,19 @@ export const RightPf = styled.div`
   justify-content: space-evenly;
 `;
 export const Icon = styled(SVG)`
-  width: 3rem;
-  height: 3rem;
-  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
 `;
 export const TopWheel = styled.div`
   width: 12px;
   height: 12px;
-  position: fixed;
   right: 25px;
   top: 10px;
 `;
 export const IconWheel = styled(SVG)`
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
   width: 2.5rem;
   height: 2.5rem;
   cursor: pointer;
@@ -99,39 +97,37 @@ export const Button2 = styled.div`
   box-shadow: 4px 4px black;
 `;
 
-export const CardWrapper = styled.div`
+export const List = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
   width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-`;
-export const CardColumn = styled.div`
-  width: 40%;
-  display: flex;
-  flex-direction: column;
+  padding: 2rem 1rem;
 `;
 
 export const Card = styled.div`
-  height: 80px;
-  margin-top: 10px;
-  border-radius: 9px;
-  border: 0.5px solid lightgrey;
   display: flex;
-  justify-content: space-evenly;
   flex-direction: column;
-  color: white;
-  box-shadow: 4px 4px black;
+
+  min-width: max-content;
+  width: calc((100% - 2rem) / 2);
+  padding: 1rem 2rem;
+
+  border-radius: 1rem;
+  border: 3px solid var(--dark-btn-inactive);
 `;
-export const WrapperI = styled.div`
+export const CardTitle = styled.div`
   display: flex;
-  margin: 5px;
-  justify-content: space-evenly;
-  width: 55%;
+  align-items: center;
+  ${typography.displayMd}
+  color: var(--dark-text);
+  gap: 1rem;
 `;
-export const ParaInWrap = styled.p`
-  margin-left: 15px;
-  font-size: 12px;
-`;
-export const H1InWrap = styled.h1`
-  margin-top: 5px;
-  margin-left: 5px;
+export const CardSubtitle = styled.div`
+  color: var(--dark-btn-text-inactive);
+  text-transform: capitalize;
+  margin-left: 3rem;
+  ${typography.captionSm_semibold}
 `;
