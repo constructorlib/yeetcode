@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import SVG from "react-inlinesvg";
 import { typography } from "styles/";
 import { ButtonBase } from "@mui/material";
@@ -68,11 +68,19 @@ export const Button = styled(ButtonBase)`
   gap: 1rem;
   padding: 1.3rem 0;
   width: 17rem;
-  border: 2px solid var(--secondary-text);
+  border: 2px solid var(--dark-btn-inactive);
   border-bottom-width: 4px;
   border-radius: 1rem;
-  color: var(--secondary-text);
+  color: var(--dark-btn-inactive);
   text-transform: uppercase;
+
+  ${({ status }) =>
+    status === "true" &&
+    css`
+      border-color: var(--secondary-text);
+      color: var(--secondary-text);
+    `}
+
   ${typography.buttonLg}
 `;
 

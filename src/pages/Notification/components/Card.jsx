@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Container,
   Title,
@@ -16,6 +17,8 @@ import {
 import { celebrate, congrats, congrats2 } from "assets/icons/";
 
 const Card = ({ name }) => {
+  const [select, setSelect] = useState(false);
+
   const src = `https://api.dicebear.com/7.x/personas/svg?seed=${
     name ?? "typosbro_"
   }&&backgroundColor=b6e3f4,c0aede,d1d4f9`;
@@ -31,7 +34,9 @@ const Card = ({ name }) => {
         </Main>
         <Image src={congrats} />
       </Header>
-      <Button>Celebrate</Button>
+      <Button status={String(select)} onClick={() => setSelect((prev) => !prev)}>
+        {select ? "Celebrated" : "Celebrate"}
+      </Button>
       <Comment>
         <Pfp src={src} />
         <Input placeholder="Add a comment..." />
