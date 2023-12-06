@@ -5,13 +5,12 @@ export const reset = css`
   body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: "Poppins", sans-serif;
   }
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif !important;
+    font-family: "Roboto", sans-serif !important;
   }
   html {
     //! ********************DISCLAIMER********************
