@@ -13,24 +13,7 @@ import {
   upload,
 } from "assets/icons";
 
-import {
-  List,
-  Card,
-  Container,
-  Image,
-  Icon,
-  PfTop,
-  LeftPf,
-  RightPf,
-  LineFollow,
-  IconWheel,
-  Button1,
-  Button2,
-  PfBottom,
-  CardTitle,
-  Paragraph,
-  CardSubtitle,
-} from "./styles/";
+import { List, Card, Container, Image, Icon, Settings, CardTitle, CardSubtitle } from "./styles/";
 
 const Profile = () => {
   const { account, current } = useSelector((state) => state.profile);
@@ -41,7 +24,7 @@ const Profile = () => {
 
   return (
     <Container>
-      <IconWheel src={cogwheel} alt="cogwheel" />
+      <Settings src={cogwheel} alt="cogwheel" />
       <Image src={src} />
 
       <List>
