@@ -1,4 +1,8 @@
-import { heart } from "assets/icons/";
+import { useNavigate } from "react-router";
+import { useDispatch, useSelector } from "react-redux";
+
+import { start, stop, next, check } from "context/testSlice";
+
 import {
   Container,
   ProgressBar,
@@ -6,17 +10,24 @@ import {
   DismissIcon,
   HeartIconContainer,
   DismissIconContainer,
-} from "../styles/Progress.js";
+} from "../styles/Progress";
 
-const Progress = () => {
+import { heart } from "assets/icons/";
+
+const Progress = ({ meta }) => {
+  const { questionList, currentQuestion, wrongQuestionList } = useSelector((state) => state.test);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   return (
     <Container>
-      <DismissIconContainer>
+      <DismissIconContainer onClick={() => navigate("/")}>
         <DismissIcon />
       </DismissIconContainer>
-      <ProgressBar status={12 / 30} />
+
+      <ProgressBar status={currentQuestion / (questionList.length + wrongQuestionList.length)} />
       <HeartIconContainer>
-        <HeartIcon src={heart} />2
+        <HeartIcon src={heart} /> {5 - wrongQuestionList.length}
       </HeartIconContainer>
     </Container>
   );

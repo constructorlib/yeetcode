@@ -1,4 +1,5 @@
-import { CheckModal, OptionList, Progress, Question } from "./components";
+import { useState } from "react";
+import { OptionList, Progress, Question } from "./components";
 
 import { Container } from "./styles/";
 
@@ -8,7 +9,6 @@ export const Test = () => {
       <Progress />
       <Question />
       <OptionList />
-      <CheckModal />
     </Container>
   );
 };

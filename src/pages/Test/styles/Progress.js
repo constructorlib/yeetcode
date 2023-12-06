@@ -33,10 +33,8 @@ export const ProgressBar = styled.div`
     height: 100%;
     width: calc(100% * ${({ status }) => status});
     border-radius: 2rem;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
 
-    background: #149954;
+    background: var(--dark-btn);
     position: absolute;
     left: 0;
   }
@@ -59,5 +57,6 @@ export const HeartIconContainer = styled.div`
   align-items: center;
   gap: 1rem;
   color: red;
-  ${typography.captionMd_semibold}
+  ${typography.buttonLg}
+  font-weight: 700;
 `;
