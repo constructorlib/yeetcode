@@ -1,126 +1,120 @@
+import { useSelector, useDispatch } from "react-redux";
+import { follow, unfollow } from "context/profileSlice";
+import { cogwheel, lightning, fire, gold, trophy, bio, math, history } from "assets/icons";
+
 import {
-  uzbekistan,
-  japan,
-  avatar2,
-  cogwheel,
-  addfriend,
-  bolt,
-  fire,
-  gold,
-  trophy,
-  bell,
-  upload,
-} from "assets/icons";
-import {
-  Container,
-  ImgDiv,
-  Icon,
-  TopWheel,
-  PfTop,
-  LeftPf,
-  RightPf,
-  LineFollow,
-  IconWheel,
-  Button1,
-  Button2,
-  PfBottom,
-  CardWrapper,
+  List,
   Card,
-  CardColumn,
-  WrapperI,
-  Paragraph,
-  ParaInWrap,
-  H1InWrap,
+  Container,
+  Image,
+  Icon,
+  Settings,
+  CardTitle,
+  CardSubtitle,
+  Meta,
+  Title,
+  Subtitle,
+  Span,
+  Button,
+  UploadIcon,
+  AddIcon,
+  CourseList,
+  CourseIcon,
+  RemoveIcon,
 } from "./styles/";
 
 const Profile = () => {
+  const { account, current } = useSelector((state) => state.profile);
+  const dispatch = useDispatch();
+  const profile = current ?? account;
+  console.log(current);
+  console.log(account);
+
+  const src = `https://api.dicebear.com/7.x/personas/svg?seed=${profile?.name}&&backgroundColor=b6e3f4`;
+
+  const checkFollowing = () => account?.following?.includes(profile.id);
+
+  const handleFollow = () => {
+    if (current?.id === account?.id) return alert("You can't follow yourself");
+
+    // check if current following account
+    // if yes, then unfollow
+    if (account?.following?.includes(profile.id)) dispatch(unfollow(profile));
+    else {
+      // else, follow
+      dispatch(follow(profile));
+    }
+  };
+
   return (
     <Container>
-      <ImgDiv>
-        <img
-          style={{
-            objectFit: "cover",
-            width: "150px",
-            height: "150px",
-          }}
-          src={avatar2}
-          alt="profile"
-        />
-        <TopWheel>
-          <IconWheel src={cogwheel} alt="cogwheel" />
-        </TopWheel>
-      </ImgDiv>
-      <PfTop>
-        <LeftPf>
-          <h1 style={{ color: "white" }}>Azizbek</h1>
-          <Paragraph>typosbro</Paragraph>
-          <Paragraph>coolcoder@gmail.com</Paragraph>
-          <LineFollow>
-            <Paragraph>31 Following {"    "}</Paragraph>
-            <Paragraph> 8 Followers</Paragraph>
-          </LineFollow>
-        </LeftPf>
-        <RightPf>
-          <Icon src={uzbekistan} alt="uzbekistan" />
-          <Icon src={japan} alt="japan" />
-          <Icon src={bell} alt="bell" style={{ height: "2.6rem", marginTop: "1px" }} />
-        </RightPf>
-      </PfTop>
-      <PfBottom>
-        {/* CHANGE THIS PART HERE
-          When I push with inline css, they push apart for some reason. 
-          In styled.js it's set to space-evenly  
-        */}
-        <Button1>
-          <IconWheel src={addfriend} alt="cogwheel" />
-          <h2 style={{ marginRight: "15px" }}>ADD FRIEND</h2>
-        </Button1>
-        <Button2>
-          {/* CHANGE THIS TOO */}
-          <IconWheel src={upload} alt="upload" />
-        </Button2>
-      </PfBottom>
-      <hr
-        style={{
-          marginTop: "15px",
-          marginBottom: "5px",
-          backgroundColor: "#5fbdff",
-        }}
-      />
-      <CardWrapper>
-        <CardColumn>
-          <Card>
-            <WrapperI>
-              <Icon src={fire} alt="fire" />
-              <H1InWrap>12</H1InWrap>
-            </WrapperI>
-            <ParaInWrap>day streak</ParaInWrap>
-          </Card>
-          <Card>
-            <WrapperI>
-              <Icon src={gold} alt="goldmedal" />
-              <H1InWrap>Gold</H1InWrap>
-            </WrapperI>
-            <ParaInWrap>Current league</ParaInWrap>
-          </Card>
-        </CardColumn>
-        <CardColumn>
-          <Card>
-            <WrapperI>
-              <Icon src={bolt} alt="bolt" />
-              <H1InWrap>5406</H1InWrap>
-            </WrapperI>
-            <ParaInWrap>Total XP</ParaInWrap>
-          </Card>
-          <Card>
-            <WrapperI>
-              <Icon src={trophy} alt="trophy" />
-              <H1InWrap>2</H1InWrap>
-            </WrapperI>
-            <ParaInWrap>Top 3 finishes</ParaInWrap>
-          </Card>
-        </CardColumn>
-      </CardWrapper>
+      <Settings src={cogwheel} alt="cogwheel" />
+      <Image src={src} />
+      <Meta>
+        <Title>{profile?.name}</Title>
+        <Subtitle>{profile?.handle}</Subtitle>
+        <Subtitle>Joined {profile?.joined}</Subtitle>
+        <div style={{ display: "flex", gap: "2rem", margin: ".5rem 0" }}>
+          <Span>{profile?.following?.length} Following</Span>
+          <Span>{profile?.followers?.length} Followers</Span>
+        </div>
+        <div style={{ display: "flex", gap: "2rem" }}>
+          {checkFollowing() ? (
+            <Button onClick={handleFollow}>
+              <RemoveIcon />
+              Unfollow
+            </Button>
+          ) : (
+            <Button onClick={handleFollow}>
+              <AddIcon />
+              Follow
+            </Button>
+          )}
+          <Button>
+            <UploadIcon />
+          </Button>
+        </div>
+
+        <CourseList>
+          <CourseIcon src={history} />
+          <CourseIcon src={math} />
+          <CourseIcon src={bio} />
+        </CourseList>
+      </Meta>
+
+      <List>
+        <Title>Statistics</Title>
+
+        <Card>
+          <CardTitle>
+            <Icon src={fire} alt="fire" />
+            {profile.streak}
+          </CardTitle>
+          <CardSubtitle>Day streak</CardSubtitle>
+        </Card>
+
+        <Card>
+          <CardTitle>
+            <Icon src={lightning} alt="lightning" />
+            {profile.total}
+          </CardTitle>
+          <CardSubtitle>Total XP</CardSubtitle>
+        </Card>
+        <Card>
+          <CardTitle>
+            <Icon src={gold} alt="goldmedal" />
+            Gold
+          </CardTitle>
+          <CardSubtitle>Current league</CardSubtitle>
+        </Card>
+        <Card>
+          <CardTitle>
+            <Icon src={trophy} alt="trophy" />
+            {profile.top}
+          </CardTitle>
+          <CardSubtitle>Top 3 finishes</CardSubtitle>
+        </Card>
+      </List>
     </Container>
   );
 };

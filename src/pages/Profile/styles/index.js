@@ -1,137 +1,146 @@
+import { ButtonBase } from "@mui/material";
 import SVG from "react-inlinesvg";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { typography } from "styles/";
+import { PersonAddAlt, PersonRemoveAlt1 } from "styled-icons/material-rounded/";
+import { Upload } from "styled-icons/bootstrap/";
 
 export const Container = styled.div`
   width: 100dvw;
   height: calc(100dvh - 10rem);
   display: flex;
   flex-direction: column;
-  position: relative;
-  background-color: #31304d;
-`;
-export const ImgDiv = styled.div`
-  width: 100dvw;
-  height: 150px;
-  border: 1px solid black;
-  background-color: #f0ece5;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
 `;
 
-export const PfTop = styled.div`
-  width: 100dvw;
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 10px;
-`;
-export const LeftPf = styled.div`
-  width: 45%;
+export const Meta = styled.div`
   display: flex;
   flex-direction: column;
-  text-align: left;
-  color: lightgrey;
-  font-size: 15px;
+  padding: 2rem 1rem;
+  gap: 1rem;
+
+  position: relative;
+
+  border-bottom: 3px solid var(--dark-btn-inactive);
 `;
 
-export const RightPf = styled.div`
-  width: 45%;
+export const Title = styled.div`
+  ${typography.displayLg}
+  width: 100%;
+`;
+export const Subtitle = styled.div`
+  ${typography.captionMd}
+`;
+export const Span = styled.div`
+  color: var(--secondary-text);
+  ${typography.displayMd}
+  letter-spacing: .2px;
+`;
+
+export const Button = styled(ButtonBase)`
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: max-content;
+  padding: 1.5rem 2rem;
+  border-radius: 1.5rem;
+  background-color: transparent;
+  border: 2px solid var(--dark-btn-inactive);
+  border-bottom-width: 4px;
+  color: var(--secondary-text);
+  ${typography.buttonLg}
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 600;
+  :first-child {
+    flex-grow: 1;
+  }
 `;
-export const Icon = styled(SVG)`
-  width: 3rem;
-  height: 3rem;
-  color: white;
-`;
-export const TopWheel = styled.div`
-  width: 12px;
-  height: 12px;
-  position: fixed;
-  right: 25px;
-  top: 10px;
-`;
-export const IconWheel = styled(SVG)`
+
+const iconCss = css`
   width: 2.5rem;
   height: 2.5rem;
-  cursor: pointer;
 `;
-export const LineFollow = styled.div`
-  display: flex;
-  font-size: 15px;
-  margin-top: 5px;
-  color: #5fbdff;
-  width: 105%;
-  justify-content: space-evenly;
+export const UploadIcon = styled(Upload)`
+  ${iconCss}
 `;
-export const Paragraph = styled.div`
-  margin-right: 5px;
-`;
-export const PfBottom = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 20px;
-`;
-export const Button1 = styled.div`
-  color: #5fbdff;
-  cursor: pointer;
-  border: 1px solid #5fbdff;
-  width: 55%;
-  border-radius: 5px;
-  text-align: center;
-  padding: 5px;
-  display: flex;
-  justify-content: space-evenly;
-  height: 35px;
-  box-shadow: 4px 4px black;
-`;
-export const Button2 = styled.div`
-  color: #5fbdff;
-  cursor: pointer;
-  border: 1px solid #5fbdff;
-  height: 35px;
-  width: 20%;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  padding: 5px;
-  box-shadow: 4px 4px black;
+export const AddIcon = styled(PersonAddAlt)`
+  ${iconCss}
 `;
 
-export const CardWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
+export const RemoveIcon = styled(PersonRemoveAlt1)`
+  ${iconCss}
 `;
-export const CardColumn = styled.div`
-  width: 40%;
+export const Image = styled.img`
+  width: 100dvw;
+  height: 20rem;
+  object-fit: contain;
+  background-color: #b6e3f4;
+`;
+
+export const Icon = styled(SVG)`
+  width: 2.5rem;
+  height: 2.5rem;
+`;
+export const Settings = styled(SVG)`
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+
+  cursor: pointer;
+
+  path {
+    fill: var(--dark-btn-inactive);
+  }
+`;
+
+export const CourseList = styled.div`
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+`;
+export const CourseIcon = styled(SVG)`
+  width: 3rem;
+  height: 3rem;
+`;
+export const List = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem 1rem;
 `;
 
 export const Card = styled.div`
-  height: 80px;
-  margin-top: 10px;
-  border-radius: 9px;
-  border: 0.5px solid lightgrey;
   display: flex;
-  justify-content: space-evenly;
   flex-direction: column;
-  color: white;
-  box-shadow: 4px 4px black;
+
+  min-width: max-content;
+  width: calc((100% - 2rem) / 2);
+  padding: 1rem 2rem;
+
+  border-radius: 1rem;
+  border: 3px solid var(--dark-btn-inactive);
 `;
-export const WrapperI = styled.div`
+export const CardTitle = styled.div`
   display: flex;
-  margin: 5px;
-  justify-content: space-evenly;
-  width: 55%;
+  align-items: center;
+  ${typography.displayMd}
+  color: var(--dark-text);
+  gap: 1rem;
 `;
-export const ParaInWrap = styled.p`
-  margin-left: 15px;
-  font-size: 12px;
-`;
-export const H1InWrap = styled.h1`
-  margin-top: 5px;
-  margin-left: 5px;
+export const CardSubtitle = styled.div`
+  color: var(--dark-btn-text-inactive);
+  text-transform: capitalize;
+  margin-left: 3rem;
+  ${typography.captionSm_semibold}
 `;

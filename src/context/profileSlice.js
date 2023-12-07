@@ -1,122 +1,285 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 
-const questionList = [
+const data = [
+  {
+    id: 0,
+    name: "RATNA123",
+    score: 900,
+    following: [1, 2, 3],
+    followers: [1, 2, 3],
+    streak: 21,
+    total: 151500,
+    top: 4,
+    handle: "@ratna123",
+    joined: "March 2021",
+  },
   {
     id: 1,
-    question: "What is the capital of France?",
-    options: ["Paris", "Berlin", "London", "Madrid"],
-    answer: "Paris",
+    name: "Akerke",
+    score: 496,
+    following: [2, 3],
+    followers: [2, 3],
+    streak: 211,
+    total: 15306,
+    top: 1,
+    handle: "@akerke",
+    joined: "December 2019",
   },
   {
     id: 2,
-    question: "Who is CEO of Tesla?",
-    options: ["Jeff Bezos", "Elon Musk", "Bill Gates", "Tony Stark"],
-    answer: "Elon Musk",
+    name: "Amelia SSRose",
+    score: 462,
+    following: [3],
+    followers: [1, 3],
+    streak: 21,
+    total: 15306,
+    top: 2,
+    handle: "@amelia",
+    joined: "December 2019",
   },
   {
     id: 3,
-    question: "The iPhone was created by which company?",
-    options: ["Apple", "Intel", "Amazon", "Microsoft"],
-    answer: "Apple",
+    name: "typosbro_",
+    score: 406,
+    following: [1, 2, 19, 17, 16],
+    followers: [1, 2],
+    streak: 21,
+    total: 15306,
+    top: 3,
+    handle: "@typosbro_",
+    joined: "December 2019",
   },
   {
     id: 4,
-    question: "How many Harry Potter books are there?",
-    options: ["1", "4", "6", "7"],
-    answer: "7",
+    name: "Essam",
+    score: 366,
+    following: [1, 2, 4],
+    followers: [1, 2, 4],
+    streak: 21,
+    total: 15306,
+    top: 4,
+    handle: "@essam",
+    joined: "December 2019",
+  },
+  {
+    id: 5,
+    name: "Nguyen",
+    score: 354,
+    following: [1, 2, 4],
+    followers: [1, 2, 4],
+    streak: 21,
+    total: 15306,
+    top: 4,
+    handle: "@nguyen",
+    joined: "December 2019",
+  },
+  {
+    id: 6,
+    name: "Tahrima",
+    score: 312,
+    following: [1, 2, 4],
+    followers: [1, 2, 4],
+    streak: 21,
+    total: 15306,
+    top: 4,
+    handle: "@tahrima",
+    joined: "December 2019",
+  },
+  {
+    id: 7,
+    name: "Elvira",
+    score: 289,
+    following: [1, 2, 4],
+    followers: [1, 2, 4],
+    streak: 21,
+    total: 15306,
+    top: 4,
+    handle: "@elvira",
+    joined: "December 2019",
+  },
+  {
+    id: 8,
+    name: "Emam",
+    score: 281,
+    following: [1, 2, 4],
+    followers: [1, 2, 4],
+    streak: 21,
+    total: 15306,
+    top: 4,
+    handle: "@emam",
+    joined: "December 2019",
+  },
+  {
+    id: 9,
+    name: "Kadar",
+    score: 277,
+    following: [1, 2, 4],
+    followers: [1, 2, 4],
+    streak: 21,
+    total: 15306,
+    top: 4,
+    handle: "@kadar",
+    joined: "December 2019",
+  },
+  {
+    id: 10,
+    name: "subham",
+    score: 240,
+    following: [1, 2, 4],
+    followers: [1, 2, 4],
+    streak: 21,
+    total: 15306,
+    top: 4,
+    handle: "@subham",
+    joined: "December 2019",
+  },
+  {
+    id: 11,
+    name: "markus",
+    score: 229,
+    following: [1, 2, 4],
+    followers: [1, 2, 4],
+    streak: 21,
+    total: 15306,
+    top: 4,
+    handle: "@markus",
+    joined: "December 2019",
+  },
+  {
+    id: 12,
+    name: "Keisuke",
+    score: 233,
+    following: [1, 2, 4],
+    followers: [1, 2, 4],
+    streak: 21,
+    total: 15306,
+    top: 4,
+    handle: "@keisuke",
+    joined: "December 2019",
+  },
+  {
+    id: 13,
+    name: "Zinab",
+    score: 179,
+    following: [1, 2, 4],
+    followers: [1, 2, 4],
+    streak: 21,
+    total: 15306,
+    top: 4,
+    handle: "@zinab",
+    joined: "December 2019",
+  },
+  {
+    id: 14,
+    name: "Zyn",
+    score: 141,
+    following: [1, 2, 3],
+    followers: [1, 2, 3],
+    streak: 21,
+    total: 15306,
+    top: 4,
+    handle: "@zyn",
+    joined: "December 2019",
+  },
+  {
+    id: 15,
+    name: "SOMA K",
+    score: 94,
+    following: [1, 2, 3],
+    followers: [1, 2, 3],
+    streak: 21,
+    total: 15306,
+    top: 4,
+    handle: "@soma",
+    joined: "December 2019",
+  },
+  {
+    id: 16,
+    name: "Amber",
+    score: 66,
+    following: [1, 2, 3],
+    followers: [1, 2, 3],
+    streak: 21,
+    total: 15306,
+    top: 4,
+    handle: "@amber",
+    joined: "December 2019",
+  },
+  {
+    id: 17,
+    name: "Kumar",
+    score: 54,
+    following: [1, 2, 3],
+    followers: [1, 2, 3],
+    streak: 21,
+    total: 15306,
+    top: 4,
+    handle: "@kumar",
+    joined: "December 2019",
+  },
+  {
+    id: 18,
+    name: "Kubbul Aqila",
+    score: 52,
+    following: [1, 2, 3],
+    followers: [1, 2, 3],
+    streak: 21,
+    total: 15306,
+    top: 4,
+    handle: "@kubbul",
+    joined: "December 2019",
+  },
+  {
+    id: 19,
+    name: "Shane",
+    score: 41,
+    following: [1, 2, 3],
+    followers: [1, 2, 3],
+    streak: 21,
+    total: 15306,
+    top: 4,
+    handle: "@shane",
+    joined: "December 2019",
   },
 ];
-
-export const init = createAsyncThunk("profile/init", async (payload) => {
-  return { ...payload };
-});
-
-export const enableReverb = createAsyncThunk("profile/reverb", async () => {});
 
 export const profileSlice = createSlice({
   name: "profile",
   initialState: {
-    questionList,
-    currentQuestion: 0,
-    wrongQuestionList: [],
-    end: false,
-    score: 0,
-    isCorrect: null,
+    list: data,
+    account: data[3],
+    current: null,
   },
   reducers: {
-    start(state) {},
-    stop(state) {
-      state.end = true;
-    },
-    next(state) {
-      state.currentQuestion++;
-      state.isCorrect = null;
+    setCurrent(state, action) {
+      const { id } = action.payload;
+      state.current = state.list.find((item) => item.id === id);
     },
 
-    check(state, action) {
-      console.log(state);
-      const { answer } = action.payload;
-      const { currentQuestion, questionList } = state;
-      const correctAnswer = questionList[currentQuestion].answer;
-      if (answer === correctAnswer) {
-        state.score++;
-        state.isCorrect = true;
-      } else {
-        state.isCorrect = false;
-        state.wrongQuestionList.push(currentQuestion);
-      }
+    follow(state, action) {
+      const { id } = action.payload;
+      state.account.following.push(id);
+      state.list[id].followers.push(state.account.id);
+      state.list[3] = state.account;
+    },
+
+    unfollow(state, action) {
+      const { id } = action.payload;
+      state.account.following = state.account.following.filter((item) => item !== id);
+      state.list[id].followers = state.list[id].followers.filter(
+        (item) => item !== state.account.id
+      );
+      state.list[3] = state.account;
+    },
+
+    setScore(state, action) {
+      state.account.score += action.payload;
+      state.list[3] = state.account;
     },
   },
-  //   extraReducers: (builder) => {
-  //     builder
-  //       .addCase(init.pending, (state) => {
-  //         return {
-  //           ...state,
-  //           player: {
-  //             ...state.player,
-  //             init: false,
-  //             playing: false,
-  //             time: 0,
-  //             duration: 0,
-  //             status: "pending",
-  //           },
-  //           audio: null,
-  //         };
-  //       })
-  //       .addCase(init.rejected, (state, action) => {
-  //         console.error(action?.error);
-  //         return {
-  //           ...state,
-  //           player: {
-  //             ...state.player,
-  //             init: false,
-  //             playing: false,
-  //             time: 0,
-  //             duration: 0,
-  //             status: "rejected",
-  //           },
-  //           audio: null,
-  //         };
-  //       })
-  //       .addCase(init.fulfilled, (state, action) => {
-  //         return {
-  //           ...state,
-  //           player: {
-  //             ...state.player,
-  //             init: true,
-  //             playing: true,
-  //             time: 0,
-  //             duration: action?.payload?.duration,
-  //             status: "fulfilled",
-  //           },
-  //           audio: action.payload,
-  //         };
-  //       });
-  //   },
 });
 
 // Action creators are generated for each case reducer function
-export const { start, stop, next, check } = profileSlice.actions;
+export const { setCurrent, follow, unfollow, setScore } = profileSlice.actions;
 
-// export { init, enableReverb };
 export default profileSlice.reducer;

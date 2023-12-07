@@ -1,17 +1,47 @@
-import { Container, Toph1, MidWrapper, FeedCard } from "./styles.js";
+import { celebrate, palestine, diamond, streak } from "assets/icons";
+import { Card } from "./components";
+import { Container, Title, List } from "./styles/";
+
+const data = [
+  {
+    name: "Tanaka",
+    time: "13 hours",
+    message: "Earned a total of 2000 XP",
+    img: celebrate,
+  },
+
+  {
+    name: "Alice",
+    time: "14 hours",
+    message: "Completed Free Palestine Course!",
+    img: palestine,
+  },
+
+  {
+    name: "lisa",
+    time: "14 hours",
+    message: "Was promoted to Diamond League!",
+    img: diamond,
+  },
+
+  {
+    name: "Kumar",
+    time: "15 hours",
+    message: "Achieved a 7 day streak!",
+    img: streak,
+  },
+];
 
 const Notification = () => {
   return (
     <Container>
-      <Toph1>
-        <h1>News</h1>
-      </Toph1>
+      <Title>Feed</Title>
 
-      <MidWrapper>
-        <FeedCard style={{ marginTop: "100px" }}>123</FeedCard>
-        <FeedCard></FeedCard>
-        <FeedCard></FeedCard>
-      </MidWrapper>
+      <List>
+        {data.map((item, index) => (
+          <Card key={index} {...item} />
+        ))}
+      </List>
     </Container>
   );
 };
