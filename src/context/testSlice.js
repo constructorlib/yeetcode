@@ -1,5 +1,10 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { boy1, boy3, boy4, boy5, girl2 } from "assets/icons/";
+import correctSrc from "assets/audio.mp3";
+import wrongSrc from "assets/wrong.mp3";
+
+const correct = new Audio(correctSrc);
+const wrong = new Audio(wrongSrc);
 
 const questionList = [
   {
@@ -77,8 +82,10 @@ export const testSlice = createSlice({
       if (action.payload === correctAnswer) {
         state.score++;
         state.isCorrect = true;
+        correct.play();
       } else {
         state.isCorrect = false;
+        wrong.play();
         state.wrongQuestionList = [...state.wrongQuestionList, currentQuestion];
       }
     },

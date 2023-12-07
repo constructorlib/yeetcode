@@ -4,8 +4,11 @@ import { start, stop, next, check } from "context/testSlice";
 
 import { Container, Option, List, Submit, Feedback, FeedbackWrapper } from "../styles/OptionList";
 import { useState } from "react";
+import correctSrc from "assets/audio.mp3";
+import wrongSrc from "assets/wrong.mp3";
 
-const OptionList = ({ current }) => {
+const OptionList = () => {
+  const correct = new Audio(correctSrc);
   const { questionList, currentQuestion, wrongQuestionList, isCorrect } = useSelector(
     (state) => state.test
   );
@@ -23,9 +26,13 @@ const OptionList = ({ current }) => {
   };
 
   const submit = () => {
-    if (isCorrect === null) return dispatch(check(selected));
+    if (isCorrect === null) {
+      return dispatch(check(selected));
+    }
+
     setSelected(null);
-    return dispatch(next());
+
+    dispatch(next());
   };
 
   return (
